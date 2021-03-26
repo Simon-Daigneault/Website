@@ -23,6 +23,7 @@
         var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
         var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
 
+
         function define(obj, key, value) {
             Object.defineProperty(obj, key, {
                 value: value,
