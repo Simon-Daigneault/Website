@@ -9,7 +9,10 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="../style.css">
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -38,14 +41,14 @@
                 <div class="team-container">
                     <div>Aerodynamics</div>
                     <div>Chassis & Integration</div>
-                    <div>Electronics</div>  
+                    <div>Electronics</div>
                     <div>Levitation, Suspension & Braking</div>
                     <div>Propulsion</div>
-                    <div>Thermals</div> 
-            </div>
-            <div>
+                    <div>Thermals</div>
+                </div>
+                <div>
 
-            </div>
+                </div>
         </section>
         <section class="sections section3">
             <div>
@@ -69,24 +72,25 @@
                 <h1>Leads</h1>
                 <p></p>
             </div>
-            <div id="leads-carousel" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+            <!-- <div id="leads-carousel" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'> -->
+            <div id="leads-carousel">
                 <div class="lead-person">
-                    hi
+                    1
                 </div>
                 <div class="lead-person">
-                    hi
+                    2
                 </div>
                 <div class="lead-person">
-                    hi
+                    3
                 </div>
                 <div class="lead-person">
-                    hi
+                    4
                 </div>
                 <div class="lead-person">
-                    hi
+                    5
                 </div>
                 <div class="lead-person">
-                    hi
+                    6
                 </div>
             </div>
         </section>
@@ -94,18 +98,37 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.lead-person').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#leads-carousel').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
         });
-    })
-
-</script>
+    </script>
 
 </body>
 <script src="javascript.js"></script>

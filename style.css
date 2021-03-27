@@ -69,13 +69,24 @@ section h1  {
     height: 500px;
     background: var(--ic-orange);
     text-align: center;
+    padding: 50px 50px;
+   
 }
 
-.leads .lead-person {
-    display: inline-block;
+#leads-carousel {
+    width: 70%;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.lead-person {
+     display: inline-block; 
+
     margin: 0 auto;
     background-color: var(--ic-blue);
-    width: 100px;
     height: 100px;
-    border-radius: 100%;
+     width: 100px;
+    border: 3px solid var(--ic-orange);
 }
