@@ -4,7 +4,7 @@ const mainTitle = landingPage.querySelector("h1");
 
 
 mainTitle.style.top = window.innerHeight - 200 + "px";
-
+landingPage.style.height = window.innerHeight + "px";
 
 
 
@@ -18,6 +18,7 @@ landingPage.style.height = window.innerHeight + "px";
 */
 window.addEventListener("resize", () => {
     mainTitle.style.top = window.innerHeight - 200 + "px";
+    landingPage.style.height = window.innerHeight + "px";
 })
 
 

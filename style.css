@@ -1,7 +1,7 @@
 @font-face {
     font-family: GilroyXBold;
   src: url(./Gilroy-ExtraBold.ttf) format('truetype');
-    font-family: GilroyLight
+    font-family: GilroyLight;
     src: url(./Gilroy-Light.ttf) format('truetype');
 }
 
@@ -36,6 +36,7 @@ canvas {
 
 .sections {
     width: 100%;
+    height: 500px;
 }
 .landingPage {
     display: block;
@@ -132,11 +133,16 @@ section h1  {
 .leads {
     width: 100%;
     height: 900px;
-    background: var(--ic-orange);
+    background: var(--ic-blue);
     text-align: center;
     padding: 50px 50px;
     position: relative;
    
+}
+
+.leads>div>h1 {
+    color: #fff;
+    font-size: 100px;
 }
 
 #leads-carousel {
@@ -165,21 +171,54 @@ section h1  {
 .lead-person {
     position: absolute;
     background: #2c3f81;
-    width: 200px;
-    height: 200px;
+    width: 66%;
+    height: 66%;
     border-radius: 100%;
     margin: 0 auto;
     top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) ;
+  filter: blur(3px);
   transition: 0.3s all linear;
+}
+.lead-person img::after {
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+  
+     background: #000; 
 }
 
 .slick-current .lead-person{
-    background-color: red;
-
+    /* background-color: red; */
+    filter: blur(0);
     transform: scale(1.5,1.5) translate(-33%, -33%);
 } 
+
+.lead-person h1 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    z-index: 10;
+background-color: rgba(255, 255, 255, 0.1);
+width: 100%;
+height: 100%;
+border-radius: 100% 100% 0 0;
+}
+
+.lead-person img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 100%;
+}
 
 .slick-next::before {
     content:"\203A";
