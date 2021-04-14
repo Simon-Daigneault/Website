@@ -1,5 +1,5 @@
 function setupModel(data) {
-    const model = data.scene.children[0];
+    const mesh = Mesh(data, material);
 
     return model;
 }

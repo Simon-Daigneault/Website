@@ -179,7 +179,7 @@ section h1  {
     margin: 0 auto;
     top: 50%;
     transform: translate(0,-50%);
-    font-size: 40px;
+    font-size: 20px;
     font-family:GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -268,6 +268,16 @@ border-radius: 100% 100% 0 0;
     font-size: 90px;
 }
 
+
+#slick-slide00 {
+    background-color: #000;
+
+}
+#pod-container {
+    background-color: skyblue;
+  width: 100%;
+  height: 100%;
+}
 
 /* #leads-carousel div {
     display: inline-block;

@@ -1,3 +1,4 @@
+
 const landingPage = document.getElementsByClassName("landingPage")[0];
 
 const mainTitle = landingPage.querySelector("h1");
@@ -11,9 +12,20 @@ const leadsDescriptionsContainer = document.getElementById("team-description");
 
 const leadsDescriptions = document.getElementById("team-description").childNodes;
 
+
+const slickSlideFirst = document.querySelector("#slick-slide00");
+
+window.addEventListener("mousedown", () => {
+    // console.log(slickSlideFirst.clientHeight);
+    console.log(slickSlideFirst);
+    slickSlideFirst.style.background = "#000";
+})
+
+
+
 for (let i = 0; i < leadsTitles.length; i++) {
 
-    if(i % 2 == 1){
+    if (i % 2 == 1) {
         leadsTitles[i].style.height = leadsTitlesContainer.clientHeight + "px";
     }
 
@@ -22,7 +34,7 @@ for (let i = 0; i < leadsTitles.length; i++) {
 
 for (let i = 0; i < leadsDescriptions.length; i++) {
 
-    if(i % 2 == 1){
+    if (i % 2 == 1) {
         leadsDescriptions[i].style.height = leadsDescriptionsContainer.clientHeight + "px";
     }
 
@@ -46,5 +58,9 @@ window.addEventListener("resize", () => {
     mainTitle.style.top = window.innerHeight - 200 + "px";
     landingPage.style.height = window.innerHeight + "px";
 })
+
+
+
+
 
 
