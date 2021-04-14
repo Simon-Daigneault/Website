@@ -270,6 +270,12 @@ border-radius: 100% 100% 0 0;
 
 #slick-slide00 {
     background-color: #000;
+
+}
+#pod-container {
+    background-color: skyblue;
+  width: 100%;
+  height: 100%;
 }
 
 /* #leads-carousel div {
