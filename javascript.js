@@ -12,17 +12,40 @@ const leadsDescriptionsContainer = document.getElementById("team-description");
 
 const leadsDescriptions = document.getElementById("team-description").childNodes;
 
+let slideInitialXPos;
+let slideResizedXPos;
+let slideRelativeXPos;
+let leadsScrollingFactor;
+let slickSlides;
+window.addEventListener("DOMContentLoaded", () => {
+    slickSlides = document.getElementsByClassName("slides");
 
-const slickSlideFirst = document.querySelector("#slick-slide00");
+    slideInitialXPos = slickSlides[0].getBoundingClientRect().left;
+    slideRelativeXPos = slideInitialXPos;
+    leadsScrollingFactor =leadsTitles[1].offsetHeight / slickSlides[0].offsetWidth;
+    console.log(leadsScrollingFactor);
+    console.log(leadsTitlesContainer.scrollHeight + "scrollheight");
 
-window.addEventListener("mousedown", () => {
-    // console.log(slickSlideFirst.clientHeight);
-    console.log(slickSlideFirst);
-    slickSlideFirst.style.background = "#000";
+
+    teamsScrolling();
 })
 
+const teamsScrolling = () => {
 
 
+    let slideXPos = slickSlides[0].getBoundingClientRect().left;
+    $(leadsTitlesContainer).scrollTop(-slideXPos*leadsScrollingFactor + slideInitialXPos);
+    $(leadsDescriptionsContainer).scrollTop(-slideXPos*leadsScrollingFactor + slideInitialXPos);
+    console.log(slideXPos - slideInitialXPos);
+    requestAnimationFrame(teamsScrolling);
+}
+
+
+
+
+
+
+console.log(leadsTitlesContainer.clientHeight);
 for (let i = 0; i < leadsTitles.length; i++) {
 
     if (i % 2 == 1) {
@@ -57,6 +80,9 @@ landingPage.style.height = window.innerHeight + "px";
 window.addEventListener("resize", () => {
     mainTitle.style.top = window.innerHeight - 200 + "px";
     landingPage.style.height = window.innerHeight + "px";
+    //NEED TO RESOLVE RESIZE ISSUE WITH SLIDES
+    // slideResizedXPos = slickSlides[0].getBoundingClientRect().left;
+    // slideRelativeXPos = slideInitialXPos*2 - slideResizedXPos;
 })
 
 

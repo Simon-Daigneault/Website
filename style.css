@@ -145,7 +145,7 @@ section h1  {
     transform: translate(0,-50%);
     width: 25%;
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 
@@ -168,8 +168,8 @@ section h1  {
  transform: translate(0,-50%); 
     width: 25%;
     height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: 0px;
+    overflow-y: hidden;
+
 }
 
 .leads #team-description div p{
@@ -270,7 +270,7 @@ border-radius: 100% 100% 0 0;
 
 
 #slick-slide00 {
-    background-color: #000;
+    /* background-color: #000; */
 
 }
 #pod-container {
