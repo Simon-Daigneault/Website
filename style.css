@@ -136,15 +136,22 @@ section h1  {
     font-size: 100px;
 }
 
+.leads>div:first-of-type {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
 
 .leads #team-name {
     display: block;
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 50%;
-    transform: translate(0,-50%);
-    width: 25%;
-    height: 300px;
+    top: 0;
+    /* transform: translate(0,-50%); */
+    width: 100%;
+    height: 100px;
     overflow-y: hidden;
 }
 
@@ -162,11 +169,11 @@ section h1  {
 
 .leads #team-description {
     display: block;
-    position: absolute;
+    position: relative;
     right: 0;
-    top: 50%;
- transform: translate(0,-50%); 
-    width: 25%;
+    top: 0%;
+ /* transform: translate(0,-50%);  */
+    width: 100%;
     height: 300px;
     overflow-y: hidden;
 
@@ -185,15 +192,15 @@ section h1  {
 
 #leads-carousel {
     display:block;
-    position: absolute;
+    position: relative;
     text-align: center;
     margin: auto auto;
     max-width: 36%;
     height: 300px;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0%;
+    left:0%;
+    /* transform: translate(0, -50%); */
     transition: 0.3s all linear;
 }
 
@@ -279,36 +286,19 @@ border-radius: 100% 100% 0 0;
   height: 100%;
 }
 
-/* #leads-carousel div {
-    display: inline-block;
-
-    margin: 0 auto;
-    background-color: var(--ic-violet);
-    height: 300px;
-    width: 300px;
-    border: 3px solid var(--ic-orange);
-
-}
-
-.lead-person {
-    display: inline-block;
-    vertical-align: middle;
-   width: 100%;
-   height: auto;
-   border-radius: 100%;
-   background: #a1a9c4;
-} 
-
-.slick-slide {
-    width: 300px;
-    height: 300px;
-}
-
-
-/*.slick-current>div{
-    background: green;
-    transition: 0.5s all linear;
-    /* transform: scale(2,2);
-    z-index: 10000; */
-
+/* @media screen and (max-width: 1100px) {
+    body {
+        background-color: #000;
+    }
+    .leads #team-name {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 20%;
+        transform: translate(0,-50%);
+        width: 25%;
+        height: 300px;
+        overflow-y: hidden;
+    }
+} */
 
