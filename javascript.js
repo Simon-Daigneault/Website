@@ -22,7 +22,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     slideInitialXPos = slickSlides[0].getBoundingClientRect().left;
     slideRelativeXPos = slideInitialXPos;
-    leadsScrollingFactor =leadsTitles[1].offsetHeight / slickSlides[0].offsetWidth;
+    leadsScrollingFactorTitles =leadsTitles[1].offsetHeight / slickSlides[0].offsetWidth;
+    leadsScrollingFactorDescriptions =leadsDescriptions[1].offsetHeight / slickSlides[0].offsetWidth;
     console.log(leadsScrollingFactor);
     console.log(leadsTitlesContainer.scrollHeight + "scrollheight");
 
@@ -31,12 +32,19 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 const teamsScrolling = () => {
+    if(window.innerWidth < 1100){
+        let slideXPos = slickSlides[0].getBoundingClientRect().left;
+        $(leadsTitlesContainer).scrollTop(-slideXPos*leadsScrollingFactorTitles + slideInitialXPos +15);
+        $(leadsDescriptionsContainer).scrollTop(-slideXPos*leadsScrollingFactorDescriptions + slideInitialXPos+20);
+        console.log(slideXPos - slideInitialXPos);
+    } else {
+        let slideXPos = slickSlides[0].getBoundingClientRect().left;
+        $(leadsTitlesContainer).scrollTop(-slideXPos*leadsScrollingFactorTitles + slideInitialXPos);
+        $(leadsDescriptionsContainer).scrollTop(-slideXPos*leadsScrollingFactorDescriptions + slideInitialXPos);
+        console.log(slideXPos - slideInitialXPos);
+    }
 
 
-    let slideXPos = slickSlides[0].getBoundingClientRect().left;
-    $(leadsTitlesContainer).scrollTop(-slideXPos*leadsScrollingFactor + slideInitialXPos);
-    $(leadsDescriptionsContainer).scrollTop(-slideXPos*leadsScrollingFactor + slideInitialXPos);
-    console.log(slideXPos - slideInitialXPos);
     requestAnimationFrame(teamsScrolling);
 }
 
