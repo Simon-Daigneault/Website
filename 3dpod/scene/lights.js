@@ -2,9 +2,9 @@ import { DirectionalLight, HemisphereLight } from 'https://unpkg.com/three@0.117
 
 function createLights() {
   const ambientLight = new HemisphereLight(
+    'lightblue',
     'white',
-    'darkslategrey',
-    1,
+    1.5,
   );
 
   const mainLight = new DirectionalLight('white', 2);
