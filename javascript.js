@@ -31,6 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
     teamsScrolling();
 })
 
+
+
 const teamsScrolling = () => {
     if(window.innerWidth < 1100){
         let slideXPos = slickSlides[0].getBoundingClientRect().left;
