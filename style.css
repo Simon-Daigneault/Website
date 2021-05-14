@@ -94,7 +94,7 @@ section h1  {
 
 .RRR {
     height: 450px;
-    width: 18%;
+    width: 22%;
     padding: 0 10px;
     background-color: var(--ic-blue);
     border: 2px solid var(--ic-blue);
@@ -107,6 +107,12 @@ section h1  {
 
 .teams {
     text-align: center;
+}
+
+#teams-title {
+    text-align: center;
+    color: var(--ic-blue);
+    size: 20px;
 }
 
 .centerwrapper {
