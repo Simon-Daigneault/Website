@@ -115,7 +115,7 @@ section h1  {
 }
 
 .team-container {
-    height: 420px;
+    height: 400px;
     width: 16.5%;
     overflow: hidden;
     float: left;
@@ -133,7 +133,7 @@ section h1  {
     visibility: hidden;
     width: 100%;
     height: 0;
-    margin-top: 15%;
+    margin-top: 23%;
     transition: .8s ease;
     transform: translate(-0, -5%);
     color: var(--ic-blue); /*set to match background colour*/ 
