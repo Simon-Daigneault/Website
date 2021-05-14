@@ -143,7 +143,7 @@ section h1  {
 
 .team-container:hover{
     color: var(--ic-blue); /*set to background colour from before*/
-    border: 2px solid var(--ic-blue));
+    border: 2px solid var(--ic-blue);
     background-color: white;
     transition: 200ms;
 }
@@ -164,7 +164,7 @@ section h1  {
 }
 
 .leads>div>h1 {
-    color: #000;
+    color: var(--ic-blue);
     font-size: 100px;
 }
 
@@ -193,7 +193,8 @@ section h1  {
     border-radius: 10px;
     background-clip: content-box;
     padding: 10%;
-    background-color: #000;
+    background-color: inherit;
+    overflow: hidden;
 }
 
 .leads #team-name div p{
@@ -273,6 +274,7 @@ ic blue
     }
    .leads>div>h1{
         font-size: 100px;
+        
     }
     .leads #team-name {
         display: block;
@@ -393,6 +395,7 @@ border-radius: 100% 100% 0 0;
 
 .slick-next::before {
     content:"\203A";
+    color: var(--ic-blue);
     position: absolute;
     left: 0px;
     top: -150px;
@@ -404,6 +407,7 @@ border-radius: 100% 100% 0 0;
 .slick-prev::before {
     content:"\2039";
     position: absolute;
+    color: var(--ic-blue);
     right: 0px;
     top: -150px;
     font-size: 200px;
