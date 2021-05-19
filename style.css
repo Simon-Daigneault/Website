@@ -91,13 +91,15 @@ section h1  {
 
 .R {
     display: block;
+    padding: 0 5%;
+    top: -70%;
     font-size: 120px;
-    color: var(--ic-orange)
+    color: #fff;
+    -webkit-text-stroke: 2px var(--ic-orange);
     }
 
 .R:hover{
-    color: #fff;
-    border: 2px solid var(--ic-orange);
+    color: var(--ic-orange);
     transition: 200ms;
 }
 
@@ -118,14 +120,34 @@ section h1  {
     color: var(--ic-blue);
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 450px;
-    width: 22%;
+    height: auto;
+    width: 100%;
     padding: 0 10px;
     margin: 1%;
     position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     z-index: 10;
-    float: left;
     text-align: left;
+
+}
+
+.social>h1 {
+    flex: 0 0 100%;
+    font-size: 100px;
+    text-align: center;
+}
+
+
+.social>div {
+    display: flex;
+    flex: 1 1 300px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
 }
 
 
