@@ -132,7 +132,7 @@ section h1  {
     justify-content: center;
     z-index: 10;
     text-align: left;
-
+    padding-bottom: 50px;
 }
 
 .social>h1 {
@@ -142,13 +142,14 @@ section h1  {
 }
 
 
-.social>div {
+.social div {
     display: flex;
     flex: 1 1 300px;
     text-align: center;
     justify-content: center;
     margin-top: 100px;
 }
+
 
 
 .teams {
