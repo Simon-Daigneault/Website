@@ -211,7 +211,7 @@ section h1  {
 
 .leads {
     width: 100%;
-    height: 900px;
+    height: 1100px;
     background: var(--leads-section-theme);
     text-align: center;
     padding: 50px 50px;
@@ -222,6 +222,7 @@ section h1  {
 .leads>div>h1 {
     color: var(--ic-blue);
     font-size: 100px;
+   
 }
 
 .leads>div:first-of-type {
@@ -310,9 +311,9 @@ ic blue
     position: absolute;
     text-align: center;
     max-width: 66%;
-    height: 350px;
+    height: 700px;
 
-    top: 50%;
+    top: 55%;
     left:50%;
       transform: translate(-50%, -50%);  
     transition: 0.3s all linear;
@@ -371,7 +372,7 @@ ic blue
         text-align: center;
         margin: auto auto;
         max-width: 100%;
-        height: 300px;
+        height: 400px;
     
         top: 0%;
         left:0%;
@@ -390,16 +391,18 @@ ic blue
 
 #leads-carousel .slides {
     /* background-color: #ac4c29; */
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 700px;
     text-align: center;
  position: relative;
     z-index: 1000;
+    transform: translate(0, 15%) ;
 }
 
 .lead-person {
     position: absolute;
-    background: #2c3f81;
+    background: rgba(0, 0, 0, 0);
+    padding: 30px;
     width: 66%;
     height: 66%;
     border-radius: 100%;
@@ -423,22 +426,37 @@ ic blue
 }
 
 .slick-current .lead-person{
-    /* background-color: red; */
+   
     filter: blur(0);
-    transform: scale(1.5,1.5) translate(-33%, -33%);
+    transform: scale(2,2) translate(-25%, -20%);
 } 
 
+
+.slick-current .lead-person:hover {
+    
+}
+
 .lead-person h1 {
-    display: block;
+    display: inline-block;
     position: absolute;
-    top: 0px;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%,0%);
+    transform: translate(-50%,-25%);
     z-index: 10;
-/* background-color: rgba(255, 255, 255, 0.1); */
+
 width: 100%;
 height: 100%;
-border-radius: 100% 100% 0 0;
+
+line-height: 600px;
+opacity: 0;
+transition: inherit;
+
+}
+
+.slick-current .lead-person h1:hover {
+    opacity: 1;
+     background-color: rgba(255, 255, 255, 0.3); 
+    cursor: pointer;
 }
 
 .lead-person img {
@@ -451,6 +469,7 @@ border-radius: 100% 100% 0 0;
 }
 
 .slick-next::before {
+    display: none;
     content:"\203A";
     color: var(--ic-blue);
     position: absolute;
@@ -462,6 +481,7 @@ border-radius: 100% 100% 0 0;
 }
 
 .slick-prev::before {
+    display: none;
     content:"\2039";
     position: absolute;
     color: var(--ic-blue);
@@ -471,7 +491,7 @@ border-radius: 100% 100% 0 0;
     z-index: 100;
     animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 4s lead-buttons-right infinite;
 }
-
+/* 
 @keyframes lead-buttons-left {
     0% {
         opacity: 0.5;
@@ -499,7 +519,7 @@ border-radius: 100% 100% 0 0;
         opacity: 0.5;
         transform: translate(0px,0px);
     }
-}
+} */
 
 
 #pod-container {
