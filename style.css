@@ -29,8 +29,56 @@ body {
     overflow-x:hidden;
 }
 
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #2c3e81b4;
+    padding: 0 20px;
+    z-index: 1000;
+    font-size: 1vh;
+}
+
+header .header-logo{
+    width: 10%;
+}
+
+header .social-icons{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    width: 90%;
+    height: 60px;
+}
+
+.social-icons a {
+    
+}
+
+header a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width:60px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #ff7a1b;
+}
+
+
+
+header a img {
+    height: 40px;
+    width: auto;
+}
+
 canvas {
-    width: 98%;
 
 }
 
@@ -39,23 +87,29 @@ canvas {
     height: 500px;
 }
 .landingPage {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 1000px;
 }
 
-.landingPage {
-    display: block;
-    position: relative;
-    top: 5%;
-    text-align: left;
-    width: 100%;
+.landingPage img {
+    height: auto;
+    max-width: 100%;
+    width: 40%;
 }
 
-
-.section1 {
-    text-align: center;
-
+.mission {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0;
     width: 100%;
+    height: auto;
 
 }
 
@@ -91,9 +145,10 @@ section h1  {
 
 .R {
     display: block;
+    position: relative;
     padding: 0 5%;
-    top: -70%;
-    font-size: 120px;
+    top: 60px;
+    font-size: 10vw;
     color: #fff;
     -webkit-text-stroke: 2px var(--ic-orange);
     }
@@ -222,7 +277,7 @@ section h1  {
 .leads>div>h1 {
     color: var(--ic-blue);
     font-size: 100px;
-   
+   text-shadow: 0px 0px 40px #aaa;
 }
 
 .leads>div:first-of-type {
@@ -321,72 +376,7 @@ ic blue
 
 
 
-@media screen and (max-width: 1100px) {
-    body {
-        background-color: white;
-    }
-    .leads{
-     
-        padding: 0px;
-    }
-   .leads>div>h1{
-        font-size: 100px;
-        
-    }
-    .leads #team-name {
-        display: block;
-        position: relative;
-        left: 0;
-        top: 0;
-     transform: translate(0,0%);
-        width: 100%;
-        height: 100px;
-        overflow-y: hidden;
-    }
-    .leads #team-name div p{
-        display: block;
-        position: relative;
-        text-align: center;
-        margin: 0 auto;
-        top: 50%;
-        transform: translate(0,-50%);
-        font-size: 30px;
-        font-family:GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    
-    .leads #team-description {
-        display: block;
-        position: relative;
-        right: 0;
-        top: 0%;
-      transform: translate(0,0%); 
-        width: 100%;
-        height: 300px;
-        overflow-y: hidden;
-    
-    }
-    
-    #leads-carousel {
-        display:block;
-        position: relative;
-        text-align: center;
-        margin: auto auto;
-        max-width: 100%;
-        height: 400px;
-    
-        top: 0%;
-        left:0%;
-         transform: translate(0, 0%);
-        transition: 0.3s all linear;
-    }
-    .slick-next::before {
-        display: none;
-    }
-    
-    .slick-prev::before {
-       display: none;
-    }
-}
+
 
 
 #leads-carousel .slides {
@@ -432,12 +422,11 @@ ic blue
 } 
 
 
-.slick-current .lead-person:hover {
-    
-}
 
 .lead-person h1 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0%;
     left: 50%;
@@ -447,7 +436,6 @@ ic blue
 width: 100%;
 height: 100%;
 
-line-height: 600px;
 opacity: 0;
 transition: inherit;
 
@@ -467,7 +455,7 @@ transition: inherit;
     margin: 0 auto;
     border-radius: 100%;
 }
-
+/* 
 .slick-next::before {
     display: none;
     content:"\203A";
@@ -490,36 +478,8 @@ transition: inherit;
     font-size: 200px;
     z-index: 100;
     animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 4s lead-buttons-right infinite;
-}
-/* 
-@keyframes lead-buttons-left {
-    0% {
-        opacity: 0.5;
-       transform: translate(0px,0px);
-    }
-    50% {
-        opacity: 1;
-        transform: translate(10px,0px);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translate(0px,0px);
-    }
-}
-@keyframes lead-buttons-right {
-    0% {
-        opacity: 0.5;
-        transform: translate(0px,0px);
-    }
-    50% {
-        opacity: 1;
-        transform: translate(-10px,0px);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translate(0px,0px);
-    }
 } */
+
 
 
 #pod-container {
@@ -544,6 +504,7 @@ transition: inherit;
     text-align: center;
     padding: 30px 0;
     font-size: 100px;
+    text-shadow:0px 0px 40px #aaa inset
 }
 
 
@@ -565,6 +526,8 @@ transition: inherit;
     margin: 0 10px;
     text-align: center;
     border: 5px solid #2c3f81;
+    box-shadow: 0px 0px 100px 10px #aaa;
+    border-radius: 10px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -575,7 +538,7 @@ transition: inherit;
     left: 0;
     width: 100%;
     height: 80%;
-
+text-shadow: 0px 0px 40px #aaa;
 }
 
 .counter-counter .counter-time {
@@ -585,27 +548,140 @@ transition: inherit;
     left: 0;
     width: 100%;
     height: 20%;
+    font-weight: 800;
 
 }
 
 .competition button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 5vw 39%;
-
+    padding: 0;
     background: #2c3f81;
-    height: 100px;
-    border-radius: 10px;
-    font-size: 3vw;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 2vw;
+    font-weight: 700;
     transition: 0.5s all;
+    box-shadow: none;
+    text-shadow: none;
+    font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
 }
 
 .competition button:hover {
-    background: #ff7a1b;
+    background: transparent;
+    color: #2c3f81;
     cursor: pointer;
+    box-shadow: 0px 0px 100px 10px #aaa;
+    text-shadow: 0px 0px 30px #aaa;
+    font-size: 2.1vw;
 }
 
 footer {
     height: 200px;
     background: #000;
     color: #ff7a1b;
+}
+
+
+@media screen and (max-width: 800px) {
+    .leads{
+     
+        padding: 0px;
+    }
+   .leads>div>h1{
+        font-size: 50px;
+        
+    }
+    
+    
+    #leads-carousel {
+        display:block;
+        position: relative;
+        text-align: center;
+        margin: auto auto;
+        max-width: 100%;
+        height: 500px;
+    
+        top: 0%;
+        left:0%;
+         transform: translate(0, 0%);
+        transition: 0.3s all linear;
+    }
+    #leads-carousel .slides {
+        /* background-color: #ac4c29; */
+
+        width: 300px;
+        height: 700px;
+        text-align: center;
+     position: relative;
+        z-index: 1000;
+        transform: translate(0, 15%) ;
+    }
+    .lead-person h1 {
+        font-size: 20px;
+    }
+    .slick-current .lead-person h1{
+        font-size: 20px;
+        text-shadow: 0px 0px 20px #fff;
+        opacity: 1;
+         background-color: rgba(255, 255, 255, 0.3); 
+        cursor: pointer;
+    }
+
+    .competition h1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        font-size: 50px;
+        font-weight: 800;
+        text-shadow:0px 0px 40px #aaa inset
+    }
+    
+    
+    .competition #competition-counter {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0 0;
+        align-items: center;
+        justify-content: center;
+        background-color: #fafafa;
+    }   
+    #competition-counter .counter-counter {
+        padding-top: 30%;
+        position: relative;
+        width: 30%;
+        margin: 0 0;
+        text-align: center;
+        border: 5px solid #2c3f81;
+        box-shadow: 0px 0px 100px 10px #aaa;
+        border-radius: 10px;
+        font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .counter-counter .counter-num {
+        position: absolute;
+        font-size: 15vw;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+    text-shadow: 0px 0px 40px #aaa;
+    }
+    
+    .counter-counter .counter-time {
+        position: absolute;
+        font-weight: 800;
+        font-size: 4vw;
+        top: 80%;
+        left: 0;
+        width: 100%;
+        height: 20%;
+    
+    }
 }
