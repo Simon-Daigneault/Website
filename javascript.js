@@ -1,22 +1,40 @@
 
 const landingPage = document.getElementsByClassName("landingPage")[0];
 
-const mainTitle = landingPage.querySelector("h1");
+const header = document.querySelectorAll("header")[0];
 
-const leadsTitlesContainer = document.getElementById("team-name");
-const leadsTitles = document.getElementById("team-name").childNodes;
-
+const headerLogo = document.getElementsByClassName("header-logo")[0];
 
 
-const leadsDescriptionsContainer = document.getElementById("team-description");
 
-const leadsDescriptions = document.getElementById("team-description").childNodes;
+
+
 
 let slideInitialXPos;
 let slideResizedXPos;
 let slideRelativeXPos;
 let leadsScrollingFactor;
 let slickSlides;
+
+
+
+window.addEventListener("scroll", function () {
+
+    if (window.pageYOffset > 10) {
+        header.style.background = "#2c3f81";
+        header.style.boxShadow = "0px 0px 30px 5px #444";
+        headerLogo.style.display = "inline-block";
+        headerLogo.style.opacity = 1;
+
+    } else {
+        header.style.background = "transparent";
+        header.style.boxShadow = "none";
+        headerLogo.style.display = "inline-block";
+        headerLogo.style.opacity = 0;
+    }
+})
+
+
 
 
 // THE FOLLOWING LINES OF CODES ARE FOR THE DEPRECATED LEADS SECTION ANIMATIONS
@@ -82,8 +100,6 @@ let slickSlides;
 
 
 
-
-mainTitle.style.top = window.innerHeight - 200 + "px";
 landingPage.style.height = window.innerHeight + "px";
 
 
@@ -93,7 +109,7 @@ landingPage.style.height = window.innerHeight + "px";
 
 
 window.addEventListener("resize", () => {
-    mainTitle.style.top = window.innerHeight - 200 + "px";
+
     landingPage.style.height = window.innerHeight + "px";
 
 

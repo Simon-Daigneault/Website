@@ -30,16 +30,19 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
     <title>Imperial College Hyperloop</title>
-    <link rel="icon" type="impage/png" href="./images/ICL.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./images/ICL.png" sizes="32x32" />
 </head>
 
 
 
 <body>
     <header class="topnav">
-        <div class="header-logo">   <a href="#index"><img src="../images/ICL.png"></a></div>
+        <div class="header-logo"> <a href="#index"><img src="../images/ICL.png"></a></div>
 
         <div class="social-icons">
             <a href="https://www.instagram.com/imperialcollegeloop/"><i class="fab fa-facebook-square"></i></a>
@@ -48,7 +51,7 @@
             <!--- use ICLoop logo not ICL-->
             <a href="mailto:">M</a>
         </div>
-        
+
 
     </header>
     <main>
@@ -137,15 +140,17 @@
         </section>
         -->
         <section class="sections landingPage">
+            <h1>Developing the World's first fully scalable hyperloop. <br>No strings attached.</h1>
             <img src="../images/ICL.png">
+
         </section>
 
         <section class="sections mission">
-            <div>
-                <div class="R">Revolutionise.</div>
-                <div class="R">Redefine.</div>
-                <div class="R">Reclaim.</div>
-            </div>
+
+            <div class="R">Revolutionise.</div>
+            <div class="R">Redefine.</div>
+            <div class="R">Reclaim.</div>
+
         </section>
 
 
@@ -464,6 +469,17 @@
             });
 
         });
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.batch(".R", {
+            onEnter: batch => gsap.to(batch, {
+                // start the animation when ".box" enters the viewport (once) -->
+                start: "top center",
+                end: "top center",
+                x: 500,
+                scrub: true,
+            })
+        });
+
     </script>
     <script src="javascript.js"></script>
 </body>
