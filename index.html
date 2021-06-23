@@ -140,16 +140,17 @@
         </section>
         -->
         <section class="sections landingPage">
-            <h1>Developing the World's first fully scalable hyperloop. <br>No strings attached.</h1>
+            <h1>We believe that the future of humanity is sustainable or none. And we need to act now. We won't get
+                second chances.</h1>
             <img src="../images/ICL.png">
 
         </section>
 
         <section class="sections mission">
 
-            <div class="R">Revolutionise.</div>
-            <div class="R">Redefine.</div>
-            <div class="R">Reclaim.</div>
+            <div class="R intro-1" >Revolutionise.</div>
+            <div class="R intro-2">Redefine.</div>
+            <div class="R intro-3">Reclaim.</div>
 
         </section>
 
@@ -470,15 +471,70 @@
 
         });
         gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.batch(".R", {
-            onEnter: batch => gsap.to(batch, {
-                // start the animation when ".box" enters the viewport (once) -->
-                start: "top center",
-                end: "top center",
-                x: 500,
+        /*ScrollTrigger.batch(".R", {
+             onEnter: batch => gsap.to(batch, {
+                 // start the animation when ".box" enters the viewport (once) -->
+                 start: "top center",
+                 end: "top center",
+                 x: 500,
+                 scrub: true,
+             })
+         }); */
+        let sections = gsap.utils.toArray(".R");
+         
+        gsap.to(".intro-1", {
+            scrollTrigger: {
+                trigger: ".intro-1",
+                start: "center center",
+                end: "bottom center",
+                markers:true,
+                pin:true, //change this for keeping the text in the middle while it's growing
                 scrub: true,
-            })
+                toggleClass: "visible"
+                
+            },
+            fontSize: 400,
+            ease: "none",
+            
         });
+        gsap.to(".intro-2", {
+            scrollTrigger: {
+                trigger: ".intro-2",
+                start: "center center",
+                end: "bottom center",
+                markers:true,
+                pin:true, //change this for keeping the text in the middle while it's growing
+                scrub: true,
+                toggleClass: "visible"
+                
+            },
+            fontSize: 400,
+            ease: "none",
+            
+        });
+        gsap.to(".intro-3", {
+            scrollTrigger: {
+                trigger: ".intro-3",
+                start: "center center",
+                end: "bottom center",
+                markers:true,
+                pin:true, //change this for keeping the text in the middle while it's growing
+                scrub: true,
+                toggleClass: "visible"
+                
+            },
+            fontSize: 400,
+            ease: "none",
+            
+        });
+       /* .forEach((panel, i) => {
+            ScrollTrigger.create({
+
+                trigger: panel,
+                
+            });*/
+
+        
 
     </script>
     <script src="javascript.js"></script>
