@@ -48,7 +48,6 @@ header {
 
 header .header-logo{
     display: inline-block;
-    width: 10%;
     opacity: 0;
 }
 
@@ -85,7 +84,6 @@ header a:hover {
 
 header a img {
     height: 40px;
-    width: auto;
 }
 
 canvas {
