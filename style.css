@@ -34,7 +34,6 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    align-items: center;
     width: 100%;
     height: 60px;
     background: transparent;
@@ -49,6 +48,7 @@ header {
 header .header-logo{
     display: inline-block;
     opacity: 0;
+    align-items: center;
 }
 
 header .social-icons{
@@ -71,7 +71,6 @@ header a {
     height: 60px;
     width:60px;
     font-size: 30px;
-    text-decoration: none;
     color: #aaa;
     transition: 0.2s all linear;
 }
@@ -254,13 +253,45 @@ section h1  {
     width: 98%;
 }
 
+@media only screen and (min-width: 1260px) {
+    /* For desktop: */
+
+    .team-container{
+        float: left;
+        padding: .5% 1%;
+        height: 400px;
+        width: 16.5%;
+        text-align: left;
+    }
+
+    .team-description{
+        margin-top: 23%;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    /*For mobile: */
+
+    .team-container{
+        width: 100%;
+        height: 100px;
+        padding: 1.5%;
+    }
+
+    .team-name {
+        float: left;
+        text-align: left;
+    }
+
+    .team-description {
+        text-align: right;
+        float: right;
+        max-width: 75%;
+    }
+}
+
 .team-container {
-    height: 400px;
-    width: 16.5%;
     overflow: hidden;
-    float: left;
-    text-align: left;
-    padding: .5% 1%;
     margin: .07%;
     color: #fff;
     font-weight: bold;
@@ -273,7 +304,6 @@ section h1  {
     visibility: hidden;
     width: 100%;
     height: 0;
-    margin-top: 23%;
     transition: .8s ease;
     transform: translate(-0, -5%);
     color: var(--ic-blue); /*set to match background colour*/ 
@@ -292,6 +322,7 @@ section h1  {
     visibility: visible;
     height: 100%;
     }
+
 
 .leads {
     width: 100%;
@@ -533,7 +564,7 @@ transition: inherit;
     text-align: center;
     padding: 30px 0;
     font-size: 100px;
-    text-shadow:0px 0px 40px #aaa inset
+    text-shadow:0px 0px 10px #aaa inset
 }
 
 
@@ -554,8 +585,8 @@ transition: inherit;
     width: 22%;
     margin: 0 10px;
     text-align: center;
-    border: 5px solid #2c3f81;
-    box-shadow: 0px 0px 100px 10px #aaa;
+    border: 3px solid #2c3f81;
+    box-shadow: 0px 0px 15px 2px #aaa;
     border-radius: 10px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -567,7 +598,7 @@ transition: inherit;
     left: 0;
     width: 100%;
     height: 80%;
-text-shadow: 0px 0px 40px #aaa;
+    color: #2c3f81;
 }
 
 .counter-counter .counter-time {
@@ -578,6 +609,7 @@ text-shadow: 0px 0px 40px #aaa;
     width: 100%;
     height: 20%;
     font-weight: 800;
+    color: #2c3f81;
 
 }
 
@@ -588,9 +620,11 @@ text-shadow: 0px 0px 40px #aaa;
     width: 100%;
     margin: 5vw 39%;
     padding: 0;
-    background: #2c3f81;
+    background: #ff7a1b;
+    color: #fff;
     height: 80px;
     border-radius: 30px;
+    border: none;
     font-size: 2vw;
     font-weight: 700;
     transition: 0.5s all;
@@ -601,10 +635,9 @@ text-shadow: 0px 0px 40px #aaa;
 
 .competition button:hover {
     background: transparent;
-    color: #2c3f81;
+    color: #ff7a1b;
     cursor: pointer;
-    box-shadow: 0px 0px 100px 10px #aaa;
-    text-shadow: 0px 0px 30px #aaa;
+    box-shadow: 0px 0px 10px 2px #aaa;
     font-size: 2.1vw;
 }
 
