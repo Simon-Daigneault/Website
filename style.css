@@ -557,6 +557,13 @@ transition: inherit;
     height: auto;
 }
 
+.lander-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
 
 .competition h1 {
    
