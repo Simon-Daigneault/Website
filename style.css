@@ -19,7 +19,17 @@
 
 html{
     scroll-behavior: smooth;
+    background-color: #121212; /*Welcome to dark mode!*/
 }
+
+/* 
+USE OF #FFF (WHITE) IN DARK MODE:
+
+High-emphasis text has an opacity of 87%
+Medium-emphasis text and hint text have opacities of 60%
+Disabled text has an opacity of 38%
+*/
+
 
 body {
     margin: 0 0;
@@ -264,7 +274,7 @@ section h1  {
         float: left;
         padding: .5% 1%;
         height: 400px;
-        width: 16.5%;
+        width: 16%;
         text-align: left;
     }
 
@@ -279,11 +289,11 @@ section h1  {
     .team-container{
         width: 100%;
         height: auto;
-        padding: 1.5%;
+        padding: 2%;
     }
 
     .team-name {
-        float: left;
+        float: center;
         text-align: left;
         max-width: 20%;
     }
@@ -297,10 +307,10 @@ section h1  {
 
 .team-container {
     overflow: hidden;
-    margin: .07%;
-    color: #fff;
+    margin: .2%;
+    color: rgba(255, 255, 255, 0.87);
     font-weight: bold;
-    background-color: var(--ic-blue); /*set once we set dark/light mode*/
+    border: 2px solid rgba(255, 255, 255, 0.87);
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -311,15 +321,14 @@ section h1  {
     height: 0;
     transition: .8s ease;
     transform: translate(-0, -5%);
-    color: var(--ic-blue); /*set to match background colour*/ 
+    color: #121212; /*set to match background colour*/ 
     font-size: 16px;
     font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
     }
 
 .team-container:hover{
-    color: var(--ic-blue); /*set to background colour from before*/
-    border: 2px solid var(--ic-blue);
-    background-color: #fff;
+    color: #121212; /*set to background colour from before*/
+    background-color: rgba(255, 255, 255, 0.87);
     transition: 200ms;
 }
 
