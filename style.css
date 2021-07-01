@@ -58,10 +58,9 @@ header {
 
 header .header-logo{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex: 0 0 50%;
-    align-items: center;
+    flex:none;
     opacity: 0;
     height: 60px;
 }
@@ -70,31 +69,38 @@ header .header-logo{
 
 header .header-logo a {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 60px;
 }
 
 header .social-icons{
     display: flex;
-    
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 0 50%;
+    height: 60px;
+}
+
+header .mail{
+    display: flex;
     justify-content: flex-end;
     align-items: center;
     flex: 0 0 50%;
     height: 60px;
 }
 
-header .social-icons a{
+header .social-icons a, header .mail a{
     display: block;
     padding: 0 10px;
     height: 45px;   
     font-size: 30px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.87);
     transition: 0.2s all linear;
 
 }  
 
-header .social-icons a i{
+header .social-icons a i, header .mail a i{
     width: 100%;
     height: 100%;
 }  
@@ -119,7 +125,7 @@ canvas {
 }
 .landingPage {
     display: flex;
-    color: white;
+    color: rgba(255, 255, 255, 0.87);
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -139,7 +145,7 @@ canvas {
     flex: 0 0 50%;
     text-align: justify;
     font-family: GilroyXLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-line-height: 70px;
+    line-height: 70px;
 
 }
 
@@ -171,16 +177,11 @@ line-height: 70px;
     padding: 0 5%;
     top: 60px;
     font-size: 1px;
-    color: #fff;
+    color: #ff7a1b;
     height: 1300px;
     width: 100%;
-    -webkit-text-stroke: 2px var(--ic-orange);
     }
 
-.R:hover{
-    color: var(--ic-orange);
-    transition: 200ms;
-}
 
 section h1  {
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -194,7 +195,7 @@ section h1  {
     border: 2px solid var(--ic-blue);
     margin: 1%;
     float: left;
-    color: white;
+    color: rgba(255, 255, 255, 0.87);
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -207,7 +208,7 @@ section h1  {
     border: 2px solid var(--ic-blue);
     margin: 1%;
     float: left;
-    color: white;
+    color: rgba(255, 255, 255, 0.87);
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -222,7 +223,7 @@ section h1  {
     border: 2px solid var(--ic-blue);
     margin: 1%;
     float: left;
-    color: white;
+    color: rgba(255, 255, 255, 0.87);
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -287,7 +288,7 @@ section h1  {
     .team-container{
         float: left;
         padding: .5% 1%;
-        height: 400px;
+        height: 550px;
         width: 16%;
         text-align: left;
     }
@@ -328,6 +329,7 @@ section h1  {
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 
 .team-description {
     visibility: hidden;
@@ -579,7 +581,7 @@ i::before {
 
 
 #pod-container {
-    background-color: skyblue;
+  background-color: skyblue;
   width: 100%;
   height: 100%;
 }
@@ -602,9 +604,10 @@ i::before {
 }
 
 .competition h1 {
-   
+    color:rgba(255, 255, 255, 0.87);
     width: 100%;
     text-align: center;
+    margin-top: 5%;;
     padding: 30px 0;
     font-size: 100px;
     text-shadow:0px 0px 10px #aaa inset
@@ -619,7 +622,7 @@ i::before {
     padding: 10vw 0;
     align-items: center;
     justify-content: center;
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
 }   
 
 #competition-counter .counter-counter {
@@ -628,9 +631,9 @@ i::before {
     width: 22%;
     margin: 0 10px;
     text-align: center;
-    border: 3px solid #2c3f81;
-    box-shadow: 0px 0px 15px 2px #aaa;
-    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 20px 10px #aaa;
+    border-radius: 5%;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -641,7 +644,8 @@ i::before {
     left: 0;
     width: 100%;
     height: 80%;
-    color: #2c3f81;
+    color: rgba(255, 255, 255, 0.87);
+
 }
 
 .counter-counter .counter-time {
@@ -652,7 +656,7 @@ i::before {
     width: 100%;
     height: 20%;
     font-weight: 800;
-    color: #2c3f81;
+    color: rgba(255, 255, 255, 0.87);
 
 }
 
@@ -664,7 +668,7 @@ i::before {
     margin: 5vw 39%;
     padding: 0;
     background: #ff7a1b;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.87);
     height: 80px;
     border-radius: 30px;
     border: none;
@@ -677,7 +681,7 @@ i::before {
 }
 
 .competition button:hover {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.87);
     color: #ff7a1b;
     cursor: pointer;
     box-shadow: 0px 0px 10px 2px #aaa;
