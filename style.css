@@ -698,13 +698,6 @@ i::before {
     box-shadow: 0px 0px 1px 2px #aaa;
 }
 
-footer {
-    height: 200px;
-    background: #000;
-    color: #ff7a1b;
-}
-
-
 @media screen and (max-width: 800px) {
     .leads{
      
@@ -809,4 +802,17 @@ footer {
 
 .visible {
     opacity: 1;
+}
+
+footer {
+    height: 200px;
+    color: #ff7a1b;
+    background-color: #fafafa;
+    align-items: center;
+}
+
+footer img {
+    width: 15%;
+    float: left;
+    margin: 5%;
 }
