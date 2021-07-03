@@ -689,12 +689,6 @@ i::before {
     border: 2px solid #ff7a1b;
 }
 
-/*
-.competition button:active {
-    box-shadow: 0px 0px 1px 2px #aaa;
-}
-*/
-
 @media screen and (max-width: 800px) {
     .leads{
      
