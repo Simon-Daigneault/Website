@@ -25,9 +25,12 @@ html{
 /* 
 USE OF #FFF (WHITE) IN DARK MODE:
 
+For long paragraphs of text:
+
 High-emphasis text has an opacity of 87%
 Medium-emphasis text and hint text have opacities of 60%
 Disabled text has an opacity of 38%
+
 */
 
 
@@ -95,7 +98,7 @@ header .social-icons a, header .mail a{
     padding: 0 10px;
     height: 45px;   
     font-size: 30px;
-    color: rgba(255, 255, 255, 0.87);
+    color: rgba(255, 255, 255, 1);
     transition: 0.2s all linear;
 
 }  
@@ -125,7 +128,7 @@ canvas {
 }
 .landingPage {
     display: flex;
-    color: rgba(255, 255, 255, 0.87);
+    color: rgba(255, 255, 255, 1);
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -471,7 +474,6 @@ ic blue
 
 
 #leads-carousel .slides {
-    /* background-color: #ac4c29; */
     width: 500px;
     height: 700px;
     text-align: center;
@@ -489,10 +491,10 @@ ic blue
     border-radius: 100%;
     margin: 0 auto;
     top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) ;
-  filter: blur(3px);
-  transition: 0.3s all linear;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    filter: blur(3px);
+    transition: 0.3s all linear;
 
 }
 .lead-person img::after {
@@ -513,7 +515,6 @@ ic blue
 } 
 
 
-
 .lead-person h1 {
     display: flex;
     justify-content: center;
@@ -524,11 +525,11 @@ ic blue
     transform: translate(-50%,-25%);
     z-index: 10;
 
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 
-opacity: 0;
-transition: inherit;
+    opacity: 0;
+    transition: inherit;
 
 }
 
@@ -536,6 +537,11 @@ transition: inherit;
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.3); 
     cursor: pointer;
+}
+
+.lead-person h3 {
+    margin: 2%;
+    font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 }
 
 .lead-person img {
