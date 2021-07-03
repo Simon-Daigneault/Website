@@ -315,8 +315,58 @@ section h1  {
         text-align: left;
     }
 
+    .team-container img {
+        max-width: 100%;    
+    }
+
     .team-description{
         margin-top: 23%;
+    }
+
+    
+    /*background images*/
+
+    #aero {
+        background: url("./images/illustrations/aero.png") no-repeat;
+        background-size: auto 100%;
+    }
+
+    #aero:hover {
+        background: url("./images/illustrations/aero_inverse.png") no-repeat;
+        background-size: auto 100%;
+    }
+
+
+    #chas {
+        background: url("./images/illustrations/TO.png") no-repeat;
+        background-size: auto 100%;
+    }
+
+    #chas:hover {
+        background: url("./images/illustrations/TO_inverse.png") no-repeat;
+        background-size: auto 100%;
+    }
+
+
+    #elec {
+        background: url("./images/illustrations/circ.png") no-repeat;
+        background-size: auto 100%;
+    }
+    /*
+    #elec {
+        background: url("./images/illustrations/circ_inverse.png") no-repeat;
+        background-size: auto 100%;
+    }
+    */
+
+    #prop {
+        background: url("./images/illustrations/LIM.png") no-repeat;
+        background-size: auto 100%;
+    }
+
+    #prop:hover {
+        background: url("./images/illustrations/LIM_inverse.png") no-repeat;
+        background-size: auto 100%;
     }
 }
 
@@ -345,6 +395,7 @@ section h1  {
 .team-container {
     overflow: hidden;
     margin: .2%;
+    padding: 1.5% 2%;
     color: rgba(255, 255, 255, 0.87);
     font-weight: bold;
     border: 2px solid rgba(255, 255, 255, 0.87);
