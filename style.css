@@ -23,9 +23,7 @@ html{
 }
 
 /* 
-USE OF #FFF (WHITE) IN DARK MODE:
-
-For long paragraphs of text:
+USE OF #FFF (WHITE) FOR LONG PARAGRAPHS:
 
 High-emphasis text has an opacity of 87%
 Medium-emphasis text and hint text have opacities of 60%
@@ -68,8 +66,6 @@ header .header-logo{
     height: 60px;
 }
 
-
-
 header .header-logo a {
     display: flex;
     justify-content: center;
@@ -111,8 +107,6 @@ header .social-icons a i, header .mail a i{
 header a:hover {
     color:#ff7a1b;
 }
-
-
 
 header a img {
     height: 40px;
@@ -194,8 +188,6 @@ section h1  {
     height: 350px;
     width: 14%;
     padding: 0 10px;
-    background-color: var(--ic-blue);
-    border: 2px solid var(--ic-blue);
     margin: 1%;
     float: left;
     color: rgba(255, 255, 255, 0.87);
@@ -207,8 +199,6 @@ section h1  {
     height: 350px;
     width: 14%;
     padding: 0 10px;
-    background-color: var(--ic-blue);
-    border: 2px solid var(--ic-blue);
     margin: 1%;
     float: left;
     color: rgba(255, 255, 255, 0.87);
@@ -222,8 +212,6 @@ section h1  {
     height: 450px;
     width: 22%;
     padding: 0 10px;
-    background-color: var(--ic-blue);
-    border: 2px solid var(--ic-blue);
     margin: 1%;
     float: left;
     color: rgba(255, 255, 255, 0.87);
@@ -232,7 +220,7 @@ section h1  {
 }
 
 .social {
-    color: var(--ic-blue);
+    color: #2c3f81;
     font-size: 20px;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: auto;
@@ -276,7 +264,7 @@ section h1  {
 
 #teams-title {
     text-align: center;
-    color: var(--ic-blue);
+    color: #2c3f81;
     size: 20px;
 }
 
@@ -364,12 +352,12 @@ section h1  {
     text-align: center;
     padding: 50px 50px;
     position: relative;
-    color:#2c3f81;
+    color: #2c3f81;
    
 }
 
 .leads>div>h1 {
-    color: var(--ic-blue);
+    color: #2c3f81;
     font-size: 100px;
     text-shadow: 0px 0px 15px #aaa;
 }
@@ -691,7 +679,6 @@ i::before {
     color: #ff7a1b;
     cursor: pointer;
     box-shadow: 0px 0px 10px 2px #aaa;
-    font-size: 2.1vw;
 }
 
 .competition button:active {
@@ -737,7 +724,7 @@ i::before {
     }
     .slick-current .lead-person h1{
         font-size: 20px;
-        text-shadow: 0px 0px 20px #fff;
+        text-shadow: 0px 0px 20px #aaa;
         opacity: 1;
          background-color: rgba(255, 255, 255, 0.3); 
         cursor: pointer;
@@ -771,7 +758,6 @@ i::before {
         width: 30%;
         margin: 0 0;
         text-align: center;
-        border: 5px solid #2c3f81;
         box-shadow: 0px 0px 100px 10px #aaa;
         border-radius: 10px;
         font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -783,7 +769,7 @@ i::before {
         left: 0;
         width: 100%;
         height: 80%;
-    text-shadow: 0px 0px 40px #aaa;
+        text-shadow: 0px 0px 40px #aaa;
     }
     
     .counter-counter .counter-time {
