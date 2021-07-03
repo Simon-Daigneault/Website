@@ -806,13 +806,13 @@ i::before {
 
 footer {
     height: 200px;
-    color: #ff7a1b;
-    background-color: #fafafa;
+    display: flex;
     align-items: center;
+    background-color: #fafafa;
 }
 
 footer img {
     width: 15%;
-    float: left;
     margin: 5%;
+    float: left;
 }
