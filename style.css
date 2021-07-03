@@ -598,12 +598,12 @@ i::before {
 }
 
 .competition h1 {
-    color:rgba(255, 255, 255, 0.87);
+    color:#fff;
     width: 100%;
     text-align: center;
-    margin-top: 5%;;
-    padding: 30px 0;
-    font-size: 100px;
+    margin-top: 5%;
+    padding: 20px;
+    font-size: 90px;
     text-shadow:0px 0px 10px #aaa inset
 }
 
@@ -613,20 +613,21 @@ i::before {
     width: 100%;
     flex-wrap: wrap;
     height: auto;
-    padding: 10vw 0;
+    padding: 5vw 0;
     align-items: center;
     justify-content: center;
-    /*background-color: #fafafa;*/
+    background-image: url("../images/blue_tunnel.jpg");
+    background-size: 100% auto;
 }   
 
 #competition-counter .counter-counter {
-    padding-top: 22%;
+    padding-top: 20%;
     position: relative;
-    width: 22%;
-    margin: 0 10px;
+    width: 20%;
+    margin: 2%;
     text-align: center;
-    border: 3px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 20px 10px #aaa;
+    background-color: rgba(255, 255, 255, 0.22);
+    border: 3px solid #fff;
     border-radius: 5%;
     font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -638,7 +639,7 @@ i::before {
     left: 0;
     width: 100%;
     height: 80%;
-    color: rgba(255, 255, 255, 0.87);
+    color: #fff;
 
 }
 
@@ -650,7 +651,8 @@ i::before {
     width: 100%;
     height: 20%;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.87);
+    color: #fff;
+    font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 
 }
 
@@ -662,7 +664,7 @@ i::before {
     margin: 5vw 39%;
     padding: 0;
     background: #ff7a1b;
-    color: rgba(255, 255, 255, 0.87);
+    color: #fff;
     height: 80px;
     border-radius: 30px;
     border: none;
@@ -675,15 +677,23 @@ i::before {
 }
 
 .competition button:hover {
-    background: rgba(255, 255, 255, 0.87);
-    color: #ff7a1b;
+    background-color:#ff8e3d;
     cursor: pointer;
-    box-shadow: 0px 0px 10px 2px #aaa;
 }
 
 .competition button:active {
+    position: relative;
+    top: 1px;
+    background-color: #fff;
+    color: #ff7a1b;
+    border: 2px solid #ff7a1b;
+}
+
+/*
+.competition button:active {
     box-shadow: 0px 0px 1px 2px #aaa;
 }
+*/
 
 @media screen and (max-width: 800px) {
     .leads{
@@ -715,7 +725,7 @@ i::before {
         width: 300px;
         height: 700px;
         text-align: center;
-     position: relative;
+        position: relative;
         z-index: 1000;
         transform: translate(0, 15%) ;
     }
@@ -726,7 +736,7 @@ i::before {
         font-size: 20px;
         text-shadow: 0px 0px 20px #aaa;
         opacity: 1;
-         background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.3); 
         cursor: pointer;
     }
 
@@ -780,7 +790,8 @@ i::before {
         left: 0;
         width: 100%;
         height: 20%;
-    
+        font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+
     }
 }
 
