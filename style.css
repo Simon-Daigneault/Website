@@ -54,13 +54,12 @@ header {
     transition: 0.5s all;
     border: none;
     padding: 0 15px;
+    align-items: center;
+    justify-content: center;
 }
-
 
 header .header-logo{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex:none;
     opacity: 0;
     height: 60px;
@@ -68,16 +67,14 @@ header .header-logo{
 
 header .header-logo a {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 60px;
 }
 
 header .social-icons{
     display: flex;
-    justify-content: flex-start;
+    flex: 0 0 45%;
     align-items: center;
-    flex: 0 0 50%;
     height: 60px;
 }
 
@@ -85,7 +82,7 @@ header .mail{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 0 0 50%;
+    flex: 0 0 45%;
     height: 60px;
 }
 
