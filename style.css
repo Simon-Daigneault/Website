@@ -790,12 +790,13 @@ i::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25%;
-    margin: 2vw 39% 5vw 39%;
+    width: 22%;
+    margin: 2vw 39.5%;
+    margin-bottom: 5vw;
     padding: 0;
     background: #ff7a1b;
     color: #fff;
-    height: 50px;
+    height: 4vw;
     border-radius: 30px;
     border: 2px solid #ff7a1b;
     font-size: 2vw;
