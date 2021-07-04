@@ -136,9 +136,9 @@ function updateTimer() {
   
     document.getElementById("timer")
       .innerHTML =
-        '<div>' + m + '<span>months</span></div>' +
-        '<div>' + w + '<span>weeks</span></div>' +
-        '<div>' + d + '<span>days</span></div>' ;
+        '<div>' + m + '<span>Months</span></div>' +
+        '<div>' + w + '<span>Weeks</span></div>' +
+        '<div>' + d + '<span>Days</span></div>' ;
   }
   setInterval('updateTimer()', 1000 );
 
