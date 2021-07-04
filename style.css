@@ -352,12 +352,12 @@ section h1  {
         background: url("./images/illustrations/circ.png") no-repeat;
         background-size: auto 100%;
     }
-    /*
-    #elec {
+    
+    #elec:hover {
         background: url("./images/illustrations/circ_inverse.png") no-repeat;
         background-size: auto 100%;
     }
-    */
+    
 
     #prop {
         background: url("./images/illustrations/LIM.png") no-repeat;
