@@ -119,7 +119,28 @@ window.addEventListener("resize", () => {
 })
 
 
-
+function updateTimer() {
+    future  = Date.parse("July 10, 2022 00:00:00"); //set to correct date
+    now     = new Date();
+    diff    = future - now;
+  
+    months  = Math.floor( diff / (1000*60*60*24*30) );
+    weeks = Math.floor( diff / (1000*60*60*24*7) );
+    days  = Math.floor( diff / (1000*60*60*24) );
+    
+  
+    m = months;
+    w = weeks - months  * 4;
+    d = days  - weeks * 7;
+  
+  
+    document.getElementById("timer")
+      .innerHTML =
+        '<div>' + m + '<span>months</span></div>' +
+        '<div>' + w + '<span>weeks</span></div>' +
+        '<div>' + d + '<span>days</span></div>' ;
+  }
+  setInterval('updateTimer()', 1000 );
 
 
 

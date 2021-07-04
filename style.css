@@ -698,7 +698,7 @@ i::before {
     text-shadow:0px 0px 10px #aaa inset
 }
 
-
+/*
 .competition #competition-counter {
     display: flex;
     width: 100%;
@@ -745,7 +745,38 @@ i::before {
     color: #fff;
     font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 
+}*/
+
+#timer {
+    margin: 10% 0;
+    width: auto;
+    height: 20%;
+    text-align: center;
+    top: 0;
+    left: 0;  
+    font-size: 12vw;
+    font-weight: 800;
+    color: #fff;
+    font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 }
+    
+#timer div{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.22);
+    border: 3px solid #fff;
+    border-radius: 5%;
+    width: 70%;
+    padding: 5%;
+    margin: 5%;
+}
+      
+#timer span {        
+    color: #fff;
+    display: block;
+    font-size: 2vw;
+    font-weight: 800;
+}
+    
 
 .competition button {
     display: flex;
