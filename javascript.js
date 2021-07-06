@@ -124,21 +124,24 @@ function updateTimer() {
     now     = new Date();
     diff    = future - now;
   
-    months  = Math.floor( diff / (1000*60*60*24*30) );
-    weeks = Math.floor( diff / (1000*60*60*24*7) );
     days  = Math.floor( diff / (1000*60*60*24) );
+    hours = Math.floor( diff / (1000*60*60) );
+    minutes  = Math.floor( diff / (1000*60) );
+    seconds = Math.floor(diff / (1000))
     
   
-    m = months;
-    w = weeks - months  * 4;
-    d = days  - weeks * 7;
+    d = days;
+    h = hours - days  * 24;
+    m = minutes  - hours * 60;
+    s = seconds - minutes * 60;
   
   
     document.getElementById("timer")
       .innerHTML =
-        '<div>' + m + '<span>Months</span></div>' +
-        '<div>' + w + '<span>Weeks</span></div>' +
-        '<div>' + d + '<span>Days</span></div>' ;
+        '<div>' + d + '<span>Days</span></div>' +
+        '<div>' + h + '<span>Hours</span></div>' +
+        '<div>' + m + '<span>Minutes</span></div>' +
+        '<div>' + s + '<span>Seconds</span></div>' ;
   }
   setInterval('updateTimer()', 1000 );
 
