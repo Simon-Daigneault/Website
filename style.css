@@ -40,6 +40,9 @@ body {
     overflow-x:hidden;
 }
 
+
+/*HEADER/TOPBAR*/
+
 header {
     display: flex;
     position: fixed;
@@ -136,6 +139,8 @@ header .button:active {
     color: #ff7a1b;
     border: 2px solid #ff7a1b;
 }
+
+/*END OF TOPBAR*/
 
 canvas {
 
@@ -312,13 +317,14 @@ section h1  {
 
 
 
+/*SUBSYSTEMS*/
+
 .teams {
     text-align: center;
 }
 
 
-
-#teams-title {
+#teams-title { /*no title atm i.e. not in use*/
     text-align: center;
     color: #2c3f81;
     size: 20px;
@@ -462,6 +468,7 @@ section h1  {
     font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
     }
 
+/*END OF SUBSYSTEMS*/
 
 
 .leads {
@@ -478,7 +485,7 @@ section h1  {
 .leads>div>h1 {
     color: #2c3f81;
     font-size: 100px;
-    text-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+    /*text-shadow: 4px 4px 0px rgba(0,0,0,0.3);*/
 }
 
 .leads>div:first-of-type {
@@ -630,7 +637,7 @@ ic blue
 
     top: 55%;
     left:50%;
-      transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);  
     transition: 0.3s all linear;
 }
 
@@ -642,7 +649,7 @@ ic blue
 #leads-carousel .slides {
     width: 500px;
     height: 700px;
-
+    
     text-align: center;
     position: relative;
     z-index: 1000;
@@ -672,7 +679,7 @@ ic blue
     top: 0px;
     left: 0px;
   
-     background: #000; 
+    background: #000; 
 }
 
 .slick-current .lead-person{
@@ -757,7 +764,7 @@ i::before {
     text-align: center;
     margin-top: 5%;
     padding: 20px;
-    font-size: 90px;
+    font-size: 6vw;
 }
 
 /*
@@ -808,6 +815,9 @@ i::before {
     font-family: GilroyLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 
 }*/
+
+
+/*COUNTDOWN*/
 
 .countdown {
     width:70%;
@@ -877,6 +887,8 @@ i::before {
     color: #ff7a1b;
     border: 2px solid #ff7a1b;
 }
+
+/*END COUNTDOWN SECTION*/
 
 @media screen and (max-width: 800px) {
     .leads{
@@ -983,6 +995,9 @@ i::before {
 .visible {
     opacity: 1;
 }
+
+
+/*FOOTER*/
 
 footer {
     height: 200px;

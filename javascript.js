@@ -21,8 +21,8 @@ let slickSlides;
 window.addEventListener("scroll", function () {
 
     if (window.pageYOffset > 10) {
-        header.style.background = "#000";
-        header.style.boxShadow = "0px 0px 30px 5px #444";
+        header.style.background = "#333";
+        //header.style.boxShadow = "0px 0px 30px 5px #444";
         headerLogo.style.display = "inline-block";
         headerLogo.style.opacity = 1;
 
@@ -118,6 +118,8 @@ window.addEventListener("resize", () => {
     // slideRelativeXPos = slideInitialXPos*2 - slideResizedXPos;
 })
 
+
+//COUNTDOWN
 
 function updateTimer() {
     future  = Date.parse("July 10, 2022 00:00:00"); //set to correct date
