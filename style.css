@@ -302,7 +302,7 @@ section h1  {
 
 
 
-.social div {
+.social>div {
     display: flex;
     flex: 1 1 300px;
     text-align: center;
@@ -562,6 +562,65 @@ ic blue
     font-family:GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 } */
 
+/* THE NEWS CAROUSEL IS DEFINED BELOW */
+
+.news-slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 100px;
+}
+
+
+#news-carousel {
+
+    flex: 0 0 600px;
+    text-align: center;
+    max-width: 1280px;
+    height: 700px;
+    transition: 0.3s all linear;
+}
+
+
+
+#news-carousel .slides {
+    /* background-color: #ac4c29; */
+
+    width: 300px;
+    height: 700px;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    transform: translate(0, 15%) ;
+}
+
+#news-carousel .slick-next::before {
+    display: initial;
+    content:"\203A";
+    color: var(--ic-blue);
+    position: absolute;
+    left: 0px;
+    top: -150px;
+    font-size: 200px;
+    z-index: 100;
+    animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 4s lead-buttons-left infinite;
+}
+
+#news-carousel .slick-prev::before {
+    display: initial;
+    content:"\2039";
+    position: absolute;
+    color: var(--ic-blue);
+    right: 0px;
+    top: -150px;
+    font-size: 200px;
+    z-index: 100;
+    animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 4s lead-buttons-right infinite;
+} */
+
+
+
 #leads-carousel {
     display:block;
     position: absolute;
@@ -583,6 +642,7 @@ ic blue
 #leads-carousel .slides {
     width: 500px;
     height: 700px;
+
     text-align: center;
     position: relative;
     z-index: 1000;
@@ -665,32 +725,6 @@ i::before {
     display: block;
     height: 0px;
 }
-
-/* 
-.slick-next::before {
-    display: none;
-    content:"\203A";
-    color: var(--ic-blue);
-    position: absolute;
-    left: 0px;
-    top: -150px;
-    font-size: 200px;
-    z-index: 100;
-    animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 4s lead-buttons-left infinite;
-}
-
-.slick-prev::before {
-    display: none;
-    content:"\2039";
-    position: absolute;
-    color: var(--ic-blue);
-    right: 0px;
-    top: -150px;
-    font-size: 200px;
-    z-index: 100;
-    animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 4s lead-buttons-right infinite;
-} */
-
 
 
 #pod-container {
