@@ -21,7 +21,7 @@ let slickSlides;
 window.addEventListener("scroll", function () {
 
     if (window.pageYOffset > 10) {
-        header.style.background = "#2c3f81";
+        header.style.background = "#000";
         header.style.boxShadow = "0px 0px 30px 5px #444";
         headerLogo.style.display = "inline-block";
         headerLogo.style.opacity = 1;
