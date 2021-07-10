@@ -332,7 +332,7 @@ section h1  {
 
 .centerwrapper {
     margin: auto;
-    width: 98%;
+    width: 91%;
 }
 
 @media only screen and (min-width: 1260px) {
@@ -370,45 +370,45 @@ section h1  {
 
     #aero {
         background: url("./images/illustrations/aero.png") no-repeat;
-        background-size: auto 100%;
+        background-size: cover;
     }
 
     #aero:hover {
         background: url("./images/illustrations/aero_inverse.png") no-repeat;
-        background-size: auto 100%;
+        background-size: cover;
     }
 
 
     #chas {
-        background: url("./images/illustrations/TO.png") no-repeat;
-        background-size: auto 100%;
+        background: url("./images/illustrations/TO.png");
+        background-size: cover;
     }
 
     #chas:hover {
-        background: url("./images/illustrations/TO_inverse.png") no-repeat;
-        background-size: auto 100%;
+        background: url("./images/illustrations/TO_inverse.png");
+        background-size: cover;
     }
 
 
     #elec {
-        background: url("./images/illustrations/circ.png") no-repeat;
-        background-size: auto 100%;
+        background: url("./images/illustrations/circ.png");
+        background-size: cover;
     }
     
     #elec:hover {
-        background: url("./images/illustrations/circ_inverse.png") no-repeat;
-        background-size: auto 100%;
+        background: url("./images/illustrations/circ_inverse.png");
+        background-size: cover;
     }
     
 
     #prop {
-        background: url("./images/illustrations/LIM.png") no-repeat;
-        background-size: auto 100%;
+        background: url("./images/illustrations/LIM.png");
+        background-size: cover;
     }
 
     #prop:hover {
-        background: url("./images/illustrations/LIM_inverse.png") no-repeat;
-        background-size: auto 100%;
+        background: url("./images/illustrations/LIM_inverse.png");
+        background-size: cover;
     }
 }
 
@@ -843,7 +843,7 @@ i::before {
     border: 3px solid #fff;
     border-radius: 5%;
     width: 22%;
-    padding: 3%;
+    padding: 3% 0;
     margin: 1.5%;
 }
       
