@@ -35,6 +35,13 @@ window.addEventListener("scroll", function () {
 })
 
 
+//DOT NAVIGATION
+
+//all possible easing functions:
+//linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, 
+//easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint
+
+dotNav('section', 'linear');
 
 
 // THE FOLLOWING LINES OF CODES ARE FOR THE DEPRECATED LEADS SECTION ANIMATIONS
@@ -122,7 +129,7 @@ window.addEventListener("resize", () => {
 //COUNTDOWN
 
 function updateTimer() {
-    future  = Date.parse("July 10, 2022 00:00:00"); //set to correct date
+    future  = Date.parse("July 10, 2022 UTC 00:00:00"); //set to correct date
     now     = new Date();
     diff    = future - now;
   
