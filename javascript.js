@@ -41,7 +41,7 @@ window.addEventListener("scroll", function () {
 //linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, 
 //easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint
 
-dotNav('section', 'linear');
+//dotNav('section', 'linear');
 
 
 // THE FOLLOWING LINES OF CODES ARE FOR THE DEPRECATED LEADS SECTION ANIMATIONS
