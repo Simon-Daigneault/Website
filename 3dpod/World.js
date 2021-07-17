@@ -59,10 +59,10 @@ class World {
 
         // Create label renderer
         labelRenderer = new CSS2DRenderer();
-        labelRenderer.setSize( window.innerWidth, window.innerHeight );
+        labelRenderer.setSize( 1000, 400 );
         labelRenderer.domElement.style.position = 'absolute';
         labelRenderer.domElement.style.top = '0px';
-        document.body.appendChild( labelRenderer.domElement );
+        document.getElementById("pod-container").appendChild( labelRenderer.domElement );
 
         // Create the render loop
         loop = new Loop(camera, scene, renderer, labelRenderer, composer);

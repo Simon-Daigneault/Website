@@ -1,7 +1,7 @@
 const setSize = (container, camera, renderer, labelRenderer, composer) => {
 
-  const width = window.innerWidth || 1;
-	const height = window.innerHeight || 1;
+  const width = 1000 || 1;
+	const height = 400 || 1;
 
   camera.aspect = width / height;
   camera.updateProjectionMatrix();

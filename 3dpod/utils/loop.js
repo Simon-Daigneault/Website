@@ -22,15 +22,16 @@ class Loop {
     //this.pointer.x = 0;
     //this.pointer.y = 1;
 
-    document.addEventListener( 'mousemove', this.onPointerMove);
+    document.getElementById("3d-pod").addEventListener( 'mousemove', this.onPointerMove);
 
     console.log(this.pointer)
   }
 
   onPointerMove(e){
-    //console.log(pointer.x);
-    pointer.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-    pointer.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+    // console.log(pointer.x);
+    // console.log(pointer.y);
+    pointer.x = ( e.offsetX / 1000 ) * 2 - 1;
+    pointer.y = - ( e.offsetY / 400 ) * 2 + 1;
   }
 
   start() {
