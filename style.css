@@ -142,7 +142,7 @@ header .button:active {
 
 /*END OF TOPBAR*/
 
-nav#dot-nav {
+/*nav #dot-nav {
     position: fixed;
     right: 20px;
     top: 20px;
@@ -159,9 +159,19 @@ nav#dot-nav {
   
   nav#dot-nav a.active, nav#dot-nav a:first-child {
     background: #fff;
-  }
+  }*/
 
+.menu {
+    position: fixed;
+    right: 3%;
+    top: 50%;
+}
 
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-family: Exo DemiBold;
+}
 
 canvas {
 
@@ -179,7 +189,7 @@ canvas {
   margin: auto;
   padding-top: 12vw;
   margin-top: 4vw;
-  margin-bottom: 2vw;;
+  margin-bottom: 3vw;;
   width: 35vw;
   height: 35vw;
   border-radius: 50%;
@@ -187,6 +197,7 @@ canvas {
   font-family: Exo DemiBold;
   font-size: 8vw;
 }
+
 
 .landingPage {
     color: rgba(255, 255, 255, 1);
@@ -352,7 +363,7 @@ section h1  {
 
 /*SUBSYSTEMS*/
 
-.teams {
+#teams {
     text-align: center;
 }
 
