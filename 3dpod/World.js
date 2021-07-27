@@ -23,6 +23,8 @@ let composer, renderPass, saoPass;
 import { CSS2DRenderer, CSS2DObject } from 'https://unpkg.com/three@0.117.0/examples/jsm/renderers/CSS2DRenderer.js';
 let labelRenderer;
 
+import { DirectionalLight, HemisphereLight, PointLight, Fog } from 'https://unpkg.com/three@0.117.0/build/three.module.js';
+
 class World {
     constructor(container){
         console.log("Creating world...");
@@ -36,8 +38,24 @@ class World {
         container.append(renderer.domElement);
 
         // Create and add the lights
-        const { ambientLight, mainLight } = createLights();
-        scene.add(ambientLight, mainLight);
+        const ambientLight = new HemisphereLight(
+            'lightblue',
+            'white',
+            0.5,
+        );
+        
+        // const mainLight = new DirectionalLight('white', 2);
+        // mainLight.position.set(0, 5, 10);
+
+        // const pointLight1 = new PointLight("lightblue", 20, 0);
+        // pointLight1.position.set(5, 5, -10);
+        // scene.add(pointLight1);
+
+        // const pointLight2 = new PointLight("lightblue", 20, 0);
+        // pointLight2.position.set(-5, 5, 10);
+        // scene.add(pointLight2);
+
+        scene.add(ambientLight);
 
         // Set up effect composer (for SAO) 
         composer = new EffectComposer( renderer );
@@ -48,14 +66,14 @@ class World {
         // Set up sao params
         saoPass.params["saoBias"] = 0.45;
         saoPass.params["saoIntensity"] = 0.15;
-        saoPass.params["saoScale"] = 15;
+        saoPass.params["saoScale"] = 25;
         saoPass.params["saoKernelRadius"] = 40;
-        saoPass.params['saoMinResolution'] = 0;
+        saoPass.params['saoMinResolution'] = 0.0001;
 
         saoPass.params["saoBlur"] = true;
 
         //saoPass.params['output'] = SAOPass.OUTPUT.SAO;
-        composer.addPass( saoPass );
+        //composer.addPass( saoPass );
 
         // Create label renderer
         labelRenderer = new CSS2DRenderer();
@@ -76,21 +94,38 @@ class World {
     }
 
     async init() {
-        const pod = await loadPod();
-        pod.name = "PodShell";
+        let podScene = await loadPod();
+        scene.add(podScene.scene);
+
+        scene.fog = new Fog( "rgb(21, 21, 21)", 0.05, 80); 
+
+        // podMeshes[0].name = "Track";
+        // podMeshes[0].add( createLabel("", 0, 0, 0) );
+        // scene.add( podMeshes[0] );
         
-        // ===== LABELS ====
-        const labelDiv = document.createElement( 'div' );
-        labelDiv.className = 'label';
-        labelDiv.textContent = 'The pod.';
-        labelDiv.style.marginTop = '-1em';
-        const label = new CSS2DObject( labelDiv );
-        label.position.set( 0, 0.4, 0 );
-        pod.add( label );
+        // podMeshes[0].name = "shell";
+        // podMeshes[0].add( createLabel("Carbon Fiber Shell", 0, 0.3, 0.4) );
+        // scene.add( podMeshes[0] );
 
-        console.log(pod);
+        // podMeshes[0].name = "LIM";
+        // podMeshes[0].add( createLabel("Linear Induction Motor", 0, 0, 0.5) );
+        // scene.add( podMeshes[0] );
 
-        scene.add( pod );
+        // podMeshes[0].name = "Hall";
+        // podMeshes[0].add( createLabel("Hallbach Arrays", 0, 0, 0) );
+        // scene.add( podMeshes[0] );
+
+        // podMeshes[0].name = "electronics";
+        // podMeshes[0].add( createLabel("Electronics", 0, 0.25, 0.1) );
+        // scene.add( podMeshes[0] );
+
+        // podMeshes[0].name = "bat";
+        // podMeshes[0].add( createLabel("Battery Packs", -0.15, 0.1, 0.3) );
+        // scene.add( podMeshes[0] );
+
+        // podMeshes[0].name = "frame";
+        // podMeshes[0].add( createLabel("Frame", -0.15, 0.1, 0.3) );
+        // scene.add( podMeshes[0] );
     }
 
     render() {
@@ -104,6 +139,17 @@ class World {
     stop () {
         loop.stop();
     }
+}
+
+function createLabel(name, offsetX, offsetY, offsetZ){
+    let div = document.createElement( 'div' );
+    div.className = 'label';
+    div.textContent = name;
+    let label = new CSS2DObject( div );
+
+    label.position.set( offsetX, offsetY, offsetZ );
+
+    return label;
 }
 
 export { World };

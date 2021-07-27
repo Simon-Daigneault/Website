@@ -7,6 +7,9 @@ import * as THREE from 'https://unpkg.com/three@0.117.0/build/three.module.js';
 const pointer = new THREE.Vector2();
 let prevIntersect;
 
+import { PointLight } from 'https://unpkg.com/three@0.117.0/build/three.module.js';
+
+
 class Loop {
   constructor(camera, scene, renderer, labelRenderer, composer) {
     this.camera = camera;
@@ -35,6 +38,15 @@ class Loop {
   }
 
   start() {
+    
+    const pointLight1 = new PointLight("rgb(20,20,255)", 50, 0);
+    pointLight1.position.set(3, 3, 10);
+    this.scene.add(pointLight1);
+
+    const pointLight2 = new PointLight("rgb(20,20,255)", 80, 0);
+    pointLight2.position.set(3, 3, 100);
+    this.scene.add(pointLight2);
+
     this.renderer.setAnimationLoop(() => {
       // tell every animated object to tick forward one frame
       this.tick();
@@ -76,6 +88,18 @@ class Loop {
 
         // Clear previous intersect
         prevIntersect = null;
+      }
+
+      pointLight1.position.z -= 2;
+
+      if(pointLight1.position.z < -100){
+        pointLight1.position.z = 100;
+      }
+
+      pointLight2.position.z -= 2;
+
+      if(pointLight2.position.z < -100){
+        pointLight2.position.z = 100;
       }
 
       // render a frame

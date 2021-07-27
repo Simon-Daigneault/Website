@@ -1,4 +1,5 @@
 import { STLLoader } from "/three/examples/jsm/loaders/STLLoader.js";
+import { GLTFLoader } from 'https://unpkg.com/three@0.117.0/examples/jsm/loaders/GLTFLoader.js';
 import { Mesh, 
     MeshNormalMaterial,
     MeshStandardMaterial } from 'https://unpkg.com/three@0.117.0/build/three.module.js'
@@ -11,15 +12,15 @@ var material = new MeshStandardMaterial({metalness: 0,
 
 
 async function loadPod() {
-    const loader = new STLLoader();
+    const loader = new GLTFLoader();
 
-    const podData = await loader.loadAsync('/media/pod.stl');
+    const podData = await loader.loadAsync('/media/3dpodsource/3dpod.glb');
 
     console.log("Zooom", podData);
 
-    const pod_mesh = new Mesh(podData, material);
+    //const pod_mesh = new Mesh(podData.scene.children[1], material);
 
-    return pod_mesh;
+    return podData;
 }
 
 export { loadPod };
