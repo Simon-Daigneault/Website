@@ -89,14 +89,19 @@
 
         
         <div id="scroll"></div>
-        <section class="sections mission" id="fullpage">
+        <!-- <section class="sections mission" id="fullpage">
 
             <div class="R intro-1 section" >Revolutionise.</div>
             <div class="R intro-2 section">Redefine.</div>
             <div class="R intro-3 section">Reclaim.</div>
 
-        </section>
+        </section> -->
 
+<section class="sections mission">
+<canvas class="mission-canvas">
+
+</canvas>
+</section>
 
         <!-- 3D pod -->
         <section class="sections">
@@ -382,52 +387,52 @@
   
         let sections = gsap.utils.toArray(".R");
          
-        gsap.to(".intro-1", {
-            scrollTrigger: {
-                trigger: ".intro-1",
-                start: "center center",
-                end: "bottom center",
+        // gsap.to(".intro-1", {
+        //     scrollTrigger: {
+        //         trigger: ".intro-1",
+        //         start: "center center",
+        //         end: "bottom center",
                 
-                pin:true, //change this for keeping the text in the middle while it's growing
-                scrub: true,
-                toggleClass: "visible",
-                snap: 1 / (sections.length - 1)
+        //         pin:true, //change this for keeping the text in the middle while it's growing
+        //         scrub: true,
+        //         toggleClass: "visible",
+        //         snap: 1 / (sections.length - 1)
                 
-            },
-            fontSize: 400,
-            ease: "none",
+        //     },
+        //     fontSize: 400,
+        //     ease: "none",
             
-        });
-        gsap.to(".intro-2", {
-            scrollTrigger: {
-                trigger: ".intro-2",
-                start: "center center",
-                end: "bottom center",
+        // });
+        // gsap.to(".intro-2", {
+        //     scrollTrigger: {
+        //         trigger: ".intro-2",
+        //         start: "center center",
+        //         end: "bottom center",
                 
-                pin:true, //change this for keeping the text in the middle while it's growing
-                scrub: true,
-                toggleClass: "visible"
+        //         pin:true, //change this for keeping the text in the middle while it's growing
+        //         scrub: true,
+        //         toggleClass: "visible"
                 
-            },
-            fontSize: 400,
-            ease: "none",
+        //     },
+        //     fontSize: 400,
+        //     ease: "none",
             
-        });
-        gsap.to(".intro-3", {
-            scrollTrigger: {
-                trigger: ".intro-3",
-                start: "center center",
-                end: "bottom center",
+        // });
+        // gsap.to(".intro-3", {
+        //     scrollTrigger: {
+        //         trigger: ".intro-3",
+        //         start: "center center",
+        //         end: "bottom center",
                 
-                pin:true, //change this for keeping the text in the middle while it's growing
-                scrub: true,
-                toggleClass: "visible"
+        //         pin:true, //change this for keeping the text in the middle while it's growing
+        //         scrub: true,
+        //         toggleClass: "visible"
                 
-            },
-            fontSize: 400,
-            ease: "none",
+        //     },
+        //     fontSize: 400,
+        //     ease: "none",
             
-        });
+        // });
        /* .forEach((panel, i) => {
             ScrollTrigger.create({
 

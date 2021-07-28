@@ -35,6 +35,58 @@ window.addEventListener("scroll", function () {
 })
 
 
+// control animation between landing and pod
+
+
+const missionCanvas = document.getElementsByClassName("mission-canvas")[0];
+
+missionCanvas.width = 640;
+missionCanvas.height = 480;
+
+
+
+const missionContext = missionCanvas.getContext("2d");
+
+// canvas.width = 1158;
+// canvas.height = 770;
+
+const frameCount = 20;
+const currentFrame = index => (
+  `media/rrr_animation/${(index + 1).toString().padStart(4,"0")}.png`
+);
+
+const images = []
+const threewords = {
+  frame: 0
+};
+
+for (let i = 0; i < frameCount; i++) {
+  const img = new Image();
+  img.src = currentFrame(i);
+  images.push(img);
+}
+
+gsap.to(threewords, {
+  frame: frameCount - 1,
+  snap: "frame",
+  scrollTrigger: {
+    // trigger: threewords,
+            
+            
+    //         pin:true,
+    scrub: 0.5,
+  },
+  onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
+});
+
+images[0].onload = render;
+
+function render() {
+  missionContext.clearRect(0, 0, missionCanvas.width, missionCanvas.height);
+  missionContext.drawImage(images[threewords.frame], 0, 0,640,480); 
+}
+
+
 //DOT NAVIGATION
 
 //all possible easing functions:
