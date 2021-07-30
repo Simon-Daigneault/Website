@@ -445,6 +445,17 @@ section h1  {
     }
     
 
+    #lsb {
+        background: url("./images/illustrations/lsb.png");
+        background-size: cover;
+    }
+
+    #lsb:hover {
+        background: url("./images/illustrations/lsb_inverse.png");
+        background-size: cover;
+    }
+
+
     #prop {
         background: url("./images/illustrations/LIM.png");
         background-size: cover;
