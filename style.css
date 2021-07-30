@@ -479,13 +479,11 @@ section h1  {
     .team-name {
         float: center;
         text-align: left;
-        max-width: 20%;
     }
 
     .team-description {
-        text-align: right;
-        float: right;
-        max-width: 75%;
+        text-align: left;
+        float: left;
     }
 
     .team-container:focus{
@@ -497,6 +495,7 @@ section h1  {
     .team-container:focus .team-description{
         visibility: visible;
         height: 100%;
+        padding-top: 2%;
         }
 }
 
