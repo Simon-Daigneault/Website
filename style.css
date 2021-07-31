@@ -165,6 +165,7 @@ header .button:active {
     position: fixed;
     right: 3%;
     top: 50%;
+    z-index: 10000;
 }
 
 .menu a{
@@ -187,15 +188,15 @@ canvas {
   justify-content: center;
   text-align: center;
   margin: auto;
-  padding-top: 12vw;
+  padding-top: 9vw;
   margin-top: 4vw;
   margin-bottom: 3vw;;
-  width: 35vw;
-  height: 35vw;
+  width: 35.5vw;
+  height: 35.5vw;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 .15vw rgba(255, 255, 255, 0.4), inset 0 0 0 2vw #121212, inset 0 0 0 2.15vw rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 .1vw rgba(255, 255, 255, 0.8), inset 0 0 0 2vw #121212, inset 0 0 0 2.1vw rgba(255, 255, 255, 0.8);
   font-family: Exo DemiBold;
-  font-size: 8vw;
+  font-size: 4vw;
 }
 
 
@@ -287,7 +288,7 @@ canvas {
 
 
 section h1  {
-    font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Exo DemiBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .change-hyperloop {
@@ -361,7 +362,8 @@ section h1  {
     flex: 0 0 100%;
     font-size: 100px;
     text-align: center;
-    color: var(--ic-orange);
+    margin-top: 14vw;
+    color: #fff;
 }
 
 
@@ -374,7 +376,11 @@ section h1  {
     margin-top: 100px;
 }
 
-
+.pod h1{
+    color: #fff;
+    text-align: center;
+    font-size: 64px;
+}
 
 /*SUBSYSTEMS*/
 
@@ -494,13 +500,11 @@ section h1  {
     .team-name {
         float: center;
         text-align: left;
-        max-width: 20%;
     }
 
     .team-description {
-        text-align: right;
-        float: right;
-        max-width: 75%;
+        text-align: left;
+        float: left;
     }
 
     .team-container:focus{
@@ -512,6 +516,7 @@ section h1  {
     .team-container:focus .team-description{
         visibility: visible;
         height: 100%;
+        padding-top: 2%;
         }
 }
 
@@ -548,13 +553,13 @@ section h1  {
     text-align: center;
     padding: 50px 50px;
     position: relative;
-    color: #ff7a1b;
-   
+    color: #ff7a1b;   
 }
 
 .leads>div>h1 {
-    color: #ff7a1b;
-    font-size: 100px;
+    margin-top: 10vw;
+    color: #fff;
+    font-size: 80px;
     /*text-shadow: 4px 4px 0px rgba(0,0,0,0.3);*/
 }
 
@@ -843,7 +848,7 @@ i::before {
     color:#fff;
     width: 100%;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 14vw;
     padding: 20px;
     font-size: 6vw;
 }
@@ -941,8 +946,8 @@ i::before {
     align-items: center;
     justify-content: center;
     width: 22%;
-    margin: 2vw 39.5%;
-    margin-bottom: 5vw;
+    margin: 0.5vw 39.5%;
+    margin-bottom: 14vw;
     padding: 2%;
     background: #ff7a1b;
     color: #fff;
