@@ -37,11 +37,15 @@ window.addEventListener("scroll", function () {
 
 // control animation between landing and pod
 
+const missionSection = document.getElementsByClassName("mission")[0];
 
 const missionCanvas = document.getElementsByClassName("mission-canvas")[0];
 
-missionCanvas.width = 640;
+
+
+missionCanvas.width = 640 ;
 missionCanvas.height = 480;
+
 
 
 
@@ -71,9 +75,9 @@ gsap.to(threewords, {
   snap: "frame",
   scrollTrigger: {
     // trigger: threewords,
-            
-            
-    //         pin:true,
+    start: "top top",
+    end: "bottom bottom",
+             
     scrub: 0.5,
   },
   onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
@@ -84,7 +88,21 @@ images[0].onload = render;
 function render() {
   missionContext.clearRect(0, 0, missionCanvas.width, missionCanvas.height);
   missionContext.drawImage(images[threewords.frame], 0, 0,640,480); 
+
 }
+
+//fix the position of the animation
+
+document.addEventListener("scroll",()=>{
+    console.log(missionCanvas);
+    if(missionSection.classList.contains('in-viewport') && !missionSection.classList.contains("fixed-animation")){
+        console.log("i am in viewport");
+        missionCanvas.classList.add("fixed-animation");
+    } else {
+        missionCanvas.classList.remove("fixed-animation");
+    }
+})
+
 
 
 //DOT NAVIGATION
