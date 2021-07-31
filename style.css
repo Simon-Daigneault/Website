@@ -360,10 +360,6 @@ section h1  {
 }
 
 .social img {
-    /*height: auto;
-     flex: 0 0 0;
-    width: 100%;*/
-    
     display: block;
     margin: 0 auto;
     width: 400px;
