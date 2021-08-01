@@ -1,7 +1,7 @@
 
 const landingPage = document.getElementsByClassName("landingPage")[0];
 
-
+// const podSection = document.getElementsByClassName("pod-section")[0];
 
 
 const header = document.querySelectorAll("header")[0];
@@ -49,7 +49,8 @@ const missionCanvas = document.getElementsByClassName("mission-canvas")[0];
 let landingHeight = landingPage.offsetHeight;
 let missionHeight = missionSection.offsetHeight;
 let missionYOffset = missionSection.offsetTop;
-
+// let podSectionHeight = podSection.offsetHeight;
+// let podSectionYOffset = podSection.offsetTop;
 console.log(missionYOffset);
 console.log(landingHeight);
 
@@ -110,9 +111,18 @@ document.addEventListener("scroll",()=>{
     if(missionHeight + landingHeight - 400> window.pageYOffset&& window.pageYOffset > landingHeight && !missionSection.classList.contains("fixed-animation")){
         console.log("i am in viewport");
         missionCanvas.classList.add("fixed-animation");
-    } else {
+    } 
+    
+    else {
         missionCanvas.classList.remove("fixed-animation");
     }
+    // if (podSectionYOffset < window.pageYOffset && window.pageYOffset < podSectionYOffset + podSectionHeight) {
+    //   podSection.style.display = "block";
+
+    // }
+    // else {
+    //   podSection.style.display = "none";
+    // }
     console.log(window.pageYOffset);
 })
 
