@@ -1,6 +1,9 @@
 
 const landingPage = document.getElementsByClassName("landingPage")[0];
 
+
+
+
 const header = document.querySelectorAll("header")[0];
 
 const headerLogo = document.getElementsByClassName("header-logo")[0];
@@ -43,6 +46,14 @@ const missionCanvas = document.getElementsByClassName("mission-canvas")[0];
 
 
 
+let landingHeight = landingPage.offsetHeight;
+let missionHeight = missionSection.offsetHeight;
+let missionYOffset = missionSection.offsetTop;
+
+console.log(missionYOffset);
+console.log(landingHeight);
+
+
 missionCanvas.width = 640 ;
 missionCanvas.height = 480;
 
@@ -75,9 +86,9 @@ gsap.to(threewords, {
   snap: "frame",
   scrollTrigger: {
     // trigger: threewords,
-    start: "top top",
-    end: "bottom bottom",
-             
+    start: `${landingHeight} top`,
+    end: `${landingHeight + missionHeight} bottom`,
+    markers: false,
     scrub: 0.5,
   },
   onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
@@ -91,16 +102,18 @@ function render() {
 
 }
 
-//fix the position of the animation
+//fix the position of the animation & only display the pod when in the viewport
+
 
 document.addEventListener("scroll",()=>{
     console.log(missionCanvas);
-    if(missionSection.classList.contains('in-viewport') && !missionSection.classList.contains("fixed-animation")){
+    if(missionHeight + landingHeight - 400> window.pageYOffset&& window.pageYOffset > landingHeight && !missionSection.classList.contains("fixed-animation")){
         console.log("i am in viewport");
         missionCanvas.classList.add("fixed-animation");
     } else {
         missionCanvas.classList.remove("fixed-animation");
     }
+    console.log(window.pageYOffset);
 })
 
 
@@ -188,8 +201,9 @@ landingPage.style.height = window.innerHeight + "px";
 window.addEventListener("resize", () => {
 
     landingPage.style.height = window.innerHeight + "px";
-
-
+    landingHeight = landingPage.offsetHeight;
+    missionYOffset = missionSection.offsetTop;
+    missionHeight = missionSection.offsetHeight;
     //NEED TO RESOLVE RESIZE ISSUE WITH SLIDES
     // slideResizedXPos = slickSlides[0].getBoundingClientRect().left;
     // slideRelativeXPos = slideInitialXPos*2 - slideResizedXPos;
