@@ -182,33 +182,44 @@ canvas {
     height: 500px;
 }
 
-.circles{
-  background-color: transparent;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  padding-top: 12vw;
-  margin-top: 4vw;
-  margin-bottom: 3vw;;
-  width: 35vw;
-  height: 35vw;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 .15vw rgba(255, 255, 255, 0.4), inset 0 0 0 2vw #121212, inset 0 0 0 2.15vw rgba(255, 255, 255, 0.4);
-  font-family: Exo DemiBold;
-  font-size: 8vw;
-}
-
-
 .landingPage {
-    color: rgba(255, 255, 255, 1);
+    display: flex;
     position: relative;
-    display: block;
     width: 100%;
     height: 1000px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+    
+    
+    
     /* background-image: url("../images/tunnel_landing.jpg");
     background-size: cover;
     background-repeat: no-repeat; */
 }
+
+
+
+.circles{
+
+    /* margin: auto;
+    padding-top: 12vw;
+    margin-top: 4vw;
+    margin-bottom: 3vw;; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 .15vw rgba(255, 255, 255, 0.4), inset 0 0 0 2vw #121212, inset 0 0 0 2.15vw rgba(255, 255, 255, 0.4);
+  font-family: Exo DemiBold;
+  font-size: 60px;}
+
+
 
 .landingPage h1 {
     padding: 0 10%;
@@ -232,7 +243,8 @@ canvas {
     align-items: center;
     margin: auto;
     padding: 1%;
-    width: 20%;
+    margin-top: 100px;
+    width: 400px;
     background: #ff7a1b;
     color: #fff;
     height: 70px;
