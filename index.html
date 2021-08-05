@@ -75,7 +75,7 @@
             
 
             <div class="lander">
-                <a href="#scroll" class="button">Start the Journey</a>
+               <button class="button" onclick="scrollToPod()">Start the Journey</button>
             </div>
 
         </section>
@@ -98,14 +98,17 @@
         </section> -->
 
 <section class="sections mission">
-<canvas class="mission-canvas">
+    <div class="mission-fixed-part">
+        <canvas class="mission-canvas">
+    </div>
+
 
 </canvas>
 </section>
 
         <!-- 3D pod -->
-        <!-- <section class="sections pod-section">
-            <script type="module" src="main.js"></script>
+        <section class="sections pod-section">
+            <!-- <script type="module" src="main.js"></script>
             <div class="pod">
                 <h1>The Pod</h1>
             </div>
@@ -114,8 +117,8 @@
                 <div id="pod-container">
 
                 </div>
-            </div>
-        </section> -->
+            </div> -->
+        </section>
 
         <section class="sections section2">
             <!--descriptions from instagram posts-->
@@ -341,6 +344,27 @@
             })
 
         });
+
+
+        //start the journey button scroll animation
+
+        function scrollDelay(ms) {
+            return new Promise(res => setTimeout(res, ms));
+        }
+
+const podSection = document.getElementsByClassName("pod-section")[0];
+
+let scrollToPod = async () =>{
+  console.log(0,podSection.offsetTop);
+
+  for (var y = 0; y <= podSection.offsetTop; y += 100) {
+    window.scrollTo({top: y, behavior: 'smooth'})
+    await scrollDelay(100)
+}
+
+}
+
+
         gsap.registerPlugin(ScrollTrigger);
   
         let sections = gsap.utils.toArray(".R");
