@@ -12,7 +12,7 @@ async function main() {
 
 main();
 
-console.clear();
+// console.clear();
 
 
 
