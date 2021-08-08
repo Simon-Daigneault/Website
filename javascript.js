@@ -1,6 +1,9 @@
 
 const landingPage = document.getElementsByClassName("landingPage")[0];
 
+// const podSection = document.getElementsByClassName("pod-section")[0];
+
+
 const header = document.querySelectorAll("header")[0];
 
 const headerLogo = document.getElementsByClassName("header-logo")[0];
@@ -18,32 +21,52 @@ let slickSlides;
 
 
 
+
+
 window.addEventListener("scroll", function () {
 
-    if (window.pageYOffset > 10) {
-        header.style.background = "#333";
-        //header.style.boxShadow = "0px 0px 30px 5px #444";
-        headerLogo.style.display = "inline-block";
-        headerLogo.style.opacity = 1;
+  if (window.pageYOffset > 10) {
+    header.style.background = "#333";
+    //header.style.boxShadow = "0px 0px 30px 5px #444";
+    headerLogo.style.display = "inline-block";
+    headerLogo.style.opacity = 1;
 
-    } else {
-        header.style.background = "transparent";
-        header.style.boxShadow = "none";
-        headerLogo.style.display = "inline-block";
-        headerLogo.style.opacity = 0;
-    }
+  } else {
+    header.style.background = "transparent";
+    header.style.boxShadow = "none";
+    headerLogo.style.display = "inline-block";
+    headerLogo.style.opacity = 0;
+  }
 })
+
+
+
+
+
 
 
 // control animation between landing and pod
 
 const missionSection = document.getElementsByClassName("mission")[0];
 
+const missionFixedPart = document.getElementsByClassName("mission-fixed-part")[0];
+
+
 const missionCanvas = document.getElementsByClassName("mission-canvas")[0];
 
 
 
-missionCanvas.width = 640 ;
+
+let landingHeight = landingPage.offsetHeight;
+let missionHeight = missionSection.offsetHeight;
+let missionYOffset = missionSection.offsetTop;
+// let podSectionHeight = podSection.offsetHeight;
+// let podSectionYOffset = podSection.offsetTop;
+console.log(missionYOffset);
+console.log(landingHeight);
+
+
+missionCanvas.width = 640;
 missionCanvas.height = 480;
 
 
@@ -56,7 +79,7 @@ const missionContext = missionCanvas.getContext("2d");
 
 const frameCount = 20;
 const currentFrame = index => (
-  `media/rrr_animation/${(index + 1).toString().padStart(4,"0")}.png`
+  `media/rrr_animation/${(index + 1).toString().padStart(4, "0")}.png`
 );
 
 const images = []
@@ -75,9 +98,9 @@ gsap.to(threewords, {
   snap: "frame",
   scrollTrigger: {
     // trigger: threewords,
-    start: "top top",
-    end: "bottom bottom",
-             
+    start: `${landingHeight} top`,
+    end: `${landingHeight + missionHeight} bottom`,
+    markers: false,
     scrub: 0.5,
   },
   onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
@@ -87,20 +110,31 @@ images[0].onload = render;
 
 function render() {
   missionContext.clearRect(0, 0, missionCanvas.width, missionCanvas.height);
-  missionContext.drawImage(images[threewords.frame], 0, 0,640,480); 
+  missionContext.drawImage(images[threewords.frame], 0, 0, 640, 480);
 
 }
 
-//fix the position of the animation
+//fix the position of the animation & only display the pod when in the viewport
 
-document.addEventListener("scroll",()=>{
-    console.log(missionCanvas);
-    if(missionSection.classList.contains('in-viewport') && !missionSection.classList.contains("fixed-animation")){
-        console.log("i am in viewport");
-        missionCanvas.classList.add("fixed-animation");
-    } else {
-        missionCanvas.classList.remove("fixed-animation");
-    }
+
+document.addEventListener("scroll", () => {
+  console.log(missionCanvas);
+  if (missionHeight + landingHeight > window.pageYOffset && window.pageYOffset > landingHeight && !missionSection.classList.contains("fixed-animation")) {
+    console.log("i am in viewport");
+    missionFixedPart.classList.add("fixed-animation");
+  }
+
+  else {
+    missionFixedPart.classList.remove("fixed-animation");
+  }
+  // if (podSectionYOffset < window.pageYOffset && window.pageYOffset < podSectionYOffset + podSectionHeight) {
+  //   podSection.style.display = "block";
+
+  // }
+  // else {
+  //   podSection.style.display = "none";
+  // }
+  console.log(window.pageYOffset);
 })
 
 
@@ -187,42 +221,43 @@ landingPage.style.height = window.innerHeight + "px";
 
 window.addEventListener("resize", () => {
 
-    landingPage.style.height = window.innerHeight + "px";
-
-
-    //NEED TO RESOLVE RESIZE ISSUE WITH SLIDES
-    // slideResizedXPos = slickSlides[0].getBoundingClientRect().left;
-    // slideRelativeXPos = slideInitialXPos*2 - slideResizedXPos;
+  landingPage.style.height = window.innerHeight + "px";
+  landingHeight = landingPage.offsetHeight;
+  missionYOffset = missionSection.offsetTop;
+  missionHeight = missionSection.offsetHeight;
+  //NEED TO RESOLVE RESIZE ISSUE WITH SLIDES
+  // slideResizedXPos = slickSlides[0].getBoundingClientRect().left;
+  // slideRelativeXPos = slideInitialXPos*2 - slideResizedXPos;
 })
 
 
 //COUNTDOWN
 
 function updateTimer() {
-    future  = Date.parse("July 10, 2022 UTC 00:00:00"); //set to correct date
-    now     = new Date();
-    diff    = future - now;
-  
-    days  = Math.floor( diff / (1000*60*60*24) );
-    hours = Math.floor( diff / (1000*60*60) );
-    minutes  = Math.floor( diff / (1000*60) );
-    seconds = Math.floor(diff / (1000))
-    
-  
-    d = days;
-    h = hours - days  * 24;
-    m = minutes  - hours * 60;
-    s = seconds - minutes * 60;
-  
-  
-    document.getElementById("timer")
-      .innerHTML =
-        '<div>' + d + '<span>Days</span></div>' +
-        '<div>' + h + '<span>Hours</span></div>' +
-        '<div>' + m + '<span>Minutes</span></div>' +
-        '<div>' + s + '<span>Seconds</span></div>' ;
-  }
-  setInterval('updateTimer()', 1000 );
+  future = Date.parse("July 10, 2022 UTC 00:00:00"); //set to correct date
+  now = new Date();
+  diff = future - now;
+
+  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  hours = Math.floor(diff / (1000 * 60 * 60));
+  minutes = Math.floor(diff / (1000 * 60));
+  seconds = Math.floor(diff / (1000))
+
+
+  d = days;
+  h = hours - days * 24;
+  m = minutes - hours * 60;
+  s = seconds - minutes * 60;
+
+
+  document.getElementById("timer")
+    .innerHTML =
+    '<div>' + d + '<span>Days</span></div>' +
+    '<div>' + h + '<span>Hours</span></div>' +
+    '<div>' + m + '<span>Minutes</span></div>' +
+    '<div>' + s + '<span>Seconds</span></div>';
+}
+setInterval('updateTimer()', 1000);
 
 
 

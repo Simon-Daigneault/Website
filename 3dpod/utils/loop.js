@@ -104,7 +104,7 @@ class Loop {
 
       // render a frame
       this.labelRenderer.render( this.scene, this.camera);
-      this.composer.render();
+      this.renderer.render( this.scene, this.camera);
 
     });
   }
