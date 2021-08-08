@@ -82,11 +82,39 @@
 
         <!--nav id="dot-nav"></nav-->
         <ul class=menu>
-            <li class='dot'onclick="scroll(0, 100);"></li>
-            <li class='dot'onclick="scroll(0, 100);"></li>
-            <li class='dot'onclick="scroll(0, 100);"></li>
-            <li class='dot'onclick="scroll(0, 100);"></li>
-            <li class='dot'onclick="scroll(0, 100);"></li>
+
+
+     
+           
+            
+       
+            <li >
+                <button class="dot" onclick="scrollToSection(1);">
+
+                </button>
+            </li>
+            <li >
+                <button class="dot" onclick="scrollToSection(2);">
+
+                </button>
+            </li>
+            <li>
+                <button class="dot" onclick="scrollToSection(3);">
+
+                </button>
+            </li>
+            <li >
+                <button class="dot" onclick="scrollToSection(4);">
+
+                </button>
+            
+            </li>
+            <li >
+
+                <button class="dot" onclick="scrollToSection(5);">
+
+                </button>
+            </li>
             </ul>
 
         
@@ -122,7 +150,7 @@
             </div>
         </section>
 
-        <section class="sections section2">
+        <section class="sections section2 subteams-section">
             <!--descriptions from instagram posts-->
             <div>
                 <!--h1 id="teams-title">Subsystems</h1-->
@@ -355,6 +383,26 @@
         }
 
 const podSection = document.getElementsByClassName("pod-section")[0];
+const subteamsSection = document.getElementsByClassName("subteams-section")[0];
+const newsSection = document.getElementsByClassName("social")[0];
+const leadsSection = document.getElementsByClassName("leads")[0];
+const competitionSection = document.getElementsByClassName("competition")[0];
+
+let scrollToSection = (whereTo) => {
+    const offset = -50;
+    if(whereTo == 1){
+        window.scrollTo({top: podSection.offsetTop + offset, behavior: 'smooth'})
+    } else if(whereTo == 2) {
+        window.scrollTo({top: subteamsSection.offsetTop + offset, behavior: 'smooth'})
+    } else if (whereTo == 3){
+        window.scrollTo({top: newsSection.offsetTop + offset, behavior: 'smooth'})
+    } else if(whereTo == 4) {
+        window.scrollTo({top: leadsSection.offsetTop + offset, behavior: 'smooth'})
+    } else if (whereTo == 5){
+        window.scrollTo({top: competitionSection.offsetTop + offset, behavior: 'smooth'})
+    }
+
+};
 
 let scrollToPod = async () =>{
   console.log(0,podSection.offsetTop);
