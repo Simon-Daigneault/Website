@@ -194,9 +194,6 @@ window.onload = function() {
 };
 
 
-Resources
-
-
 // THE FOLLOWING LINES OF CODES ARE FOR THE DEPRECATED LEADS SECTION ANIMATIONS
 
 
