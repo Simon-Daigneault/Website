@@ -51,7 +51,7 @@ header {
     width: 100%;
     height: 3.5vw;
     background: transparent;
-    z-index: 1000;
+    z-index: 500;
     font-size: 1vh;
     transition: 0.5s all;
     border: none;
@@ -218,6 +218,7 @@ body .landingPage {
     background-image: url("../images/BG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 101;
     
 }
 
@@ -225,6 +226,99 @@ body .landingPage {
     font-weight: 700;
     font-size: 6vw;
     margin-bottom: 8vw;
+}
+
+.landingPage .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1%;
+    margin-top: 20px;
+    background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+    background: #ff7a1b;
+    color: #fff;
+    border: 2px solid #ff7a1b;
+    font-size: 2vw;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+}
+
+/* .lander .button:hover {
+    background-color:#ff8e3d;
+    border: 2px solid #ff8e3d;
+    cursor: pointer;
+}
+
+.lander .button:active {
+    position: relative;
+    top: 1px;
+    background-color: #fff;
+    color: #ff7a1b;
+    border: 2px solid #ff7a1b;
+} */
+
+.glow-on-hover {
+    width: 300px;
+    height: 80px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: var(--ic-orange);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 30px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 30px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 .circles{
@@ -264,42 +358,12 @@ body .landingPage {
     z-index: -1;
 }*/
 
-.lander .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 1%;
-    margin-top: 1vw;
-    width: 20vw;
-    background: #ff7a1b;
-    color: #fff;
-    height: 5vw;
-    border-radius: 30px;
-    border: 2px solid #ff7a1b;
-    font-size: 2vw;
-    font-weight: 700;
-    text-decoration: none;
-    font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
-}
 
-.lander .button:hover {
-    background-color:#ff8e3d;
-    border: 2px solid #ff8e3d;
-    cursor: pointer;
-}
-
-.lander .button:active {
-    position: relative;
-    top: 1px;
-    background-color: #fff;
-    color: #ff7a1b;
-    border: 2px solid #ff7a1b;
-}
 
 .mission {
     display: flex;
-    z-index: 1;
+    position: relative;
+    z-index: 1000;
     width: 100%;
     height: 4000px;
     justify-content: center;
@@ -307,14 +371,18 @@ body .landingPage {
     flex-wrap: wrap;
     background-color: #121212;
     margin-bottom: 600px;
+    
 }
 
 .mission-fixed-part {
+    display: block;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .mission canvas {
@@ -439,6 +507,33 @@ section h1  {
     display: block;
     margin: 0 auto;
     width: 400px;
+}
+
+#pod-container {
+    position: relative;
+}
+
+#pod-container::before {
+    transition: 0.5s all;
+}
+
+#pod-container:hover:before {
+content: "You are in Zoom-mode";
+display: flex;
+position: absolute;
+bottom: -0px;
+left: 0;
+width: 100%;
+height: 50px;
+background: var(--ic-orange);
+z-index: 99;
+color: #121212;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+font-weight: 700;
+font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+border-radius: 30px;
 }
 
 
