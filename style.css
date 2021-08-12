@@ -285,7 +285,7 @@ color: transparent;
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    animation: glowing 40s linear infinite;
     opacity: 1;
     transition: opacity .3s ease-in-out;
     border-radius: 30px;
@@ -295,7 +295,7 @@ color: transparent;
     color: #000
 }
 
-.glow-on-hover:active:after {
+.glow-on-hover:hover:after {
     background: transparent;
 }
 
