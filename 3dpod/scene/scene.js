@@ -8,7 +8,7 @@ import { CSS2DObject } from 'https://unpkg.com/three@0.117.0/examples/jsm/render
 function createScene() {
   const scene = new Scene();
 
-  scene.background = new Color('rgb(21, 21, 21)');
+  scene.background = new Color('#121212');
 
   var geo = new THREE.PlaneBufferGeometry(2000, 2000, 8, 8);
   var mat = new THREE.MeshBasicMaterial({ color: "rgb(15, 15, 15)", side: THREE.SingleSide });
