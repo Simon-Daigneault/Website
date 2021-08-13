@@ -59,8 +59,8 @@
         <div class="header-logo"> <a href="#land"><img src="../images/logo/ICLogo_white.png"></a></div>
 
         <div class="mail"><a href="mailto:" class="button">Get in Touch</a></div>
-
-    </header>
+        <div class="mail-mobile"><a href="mailto:"></a><i class="fas fa-paper-plane"></i></a></div>
+    </header>   
     <main>
       
 
@@ -413,7 +413,7 @@ let scrollToSection = (whereTo) => {
 let scrollToPod = async () =>{
   console.log(0,podSection.offsetTop);
 
-  for (var y = 0; y <= podSection.offsetTop; y += 100) {
+  for (var y = 0; y <= podSection.offsetTop; y += 50) {
     window.scrollTo({top: y, behavior: 'smooth'})
     await scrollDelay(100)
 }
