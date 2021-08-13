@@ -55,7 +55,7 @@ header {
     font-size: 40px;
     transition: 0.5s all;
     border: none;
-    padding: 0 100px;
+    padding: 0 10vw;
     align-items: center;
     justify-content: center;
 }
@@ -83,6 +83,24 @@ header .mail{
     align-items: center;
     flex: 0 0 45%;
     height: 40px;
+    margin-left: 5  px;
+}
+
+header .mail-mobile {
+    display: none;
+    width: 100px;
+    height:50px;
+    font-size: 30px;
+    color: #fff;
+    justify-content: center;
+    align-items: center ;
+    padding: 0;
+    margin: 0;
+}
+
+header .mail-mobile i {
+    margin: 0;
+    padding: 0;
 }
 
 header .social-icons a{
@@ -1136,48 +1154,19 @@ i::before {
     }
     
     
-    /*
-    .competition #competition-counter {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        height: auto;
-        padding: 0 0;
-        align-items: center;
-        justify-content: center;
-        background-color: #fafafa;
-    }   
-    #competition-counter .counter-counter {
-        padding-top: 30%;
-        position: relative;
-        width: 30%;
-        margin: 0 0;
-        text-align: center;
-        box-shadow: 0px 0px 100px 10px #aaa;
-        border-radius: 10px;
-        font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    .counter-counter .counter-num {
-        position: absolute;
-        font-size: 15vw;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80%;
-        text-shadow: 0px 0px 40px #aaa;
-    }
-    
-    .counter-counter .counter-time {
-        position: absolute;
-        font-weight: 800;
-        font-size: 4vw;
-        top: 80%;
-        left: 0;
-        width: 100%;
-        height: 20%;
-        font-family: GilroyXBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+  
+}
 
-    }*/
+@media screen and (max-width: 600px) {
+  .landingPage h1 {
+      font-size: 70px;
+  }
+    header .mail {
+        display: none;
+    }
+   header .mail-mobile {
+        display: flex;
+    }
 }
 
 /* classed for Javascript are defined here! */
