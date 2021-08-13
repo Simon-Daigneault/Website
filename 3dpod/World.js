@@ -26,7 +26,7 @@ let labelRenderer;
 import { DirectionalLight, HemisphereLight, PointLight, Fog } from 'https://unpkg.com/three@0.117.0/build/three.module.js';
 
 class World {
-    constructor(container){
+    constructor(container) {
         console.log("Creating world...");
 
         // Make the camera, renderer and scene
@@ -43,7 +43,7 @@ class World {
             'white',
             0.5,
         );
-        
+
         // const mainLight = new DirectionalLight('white', 2);
         // mainLight.position.set(0, 5, 10);
 
@@ -58,10 +58,10 @@ class World {
         scene.add(ambientLight);
 
         // Set up effect composer (for SAO) 
-        composer = new EffectComposer( renderer );
-        renderPass = new SSAARenderPass( scene, camera );
-        composer.addPass( renderPass );
-        saoPass = new SAOPass( scene, camera, false, true );
+        composer = new EffectComposer(renderer);
+        renderPass = new SSAARenderPass(scene, camera);
+        composer.addPass(renderPass);
+        saoPass = new SAOPass(scene, camera, false, true);
 
         // Set up sao params
         saoPass.params["saoBias"] = 0.45;
@@ -77,10 +77,10 @@ class World {
 
         // Create label renderer
         labelRenderer = new CSS2DRenderer();
-        labelRenderer.setSize( 1000, 400 );
+        labelRenderer.setSize(1000, 400);
         labelRenderer.domElement.style.position = 'absolute';
         labelRenderer.domElement.style.top = '0px';
-        document.getElementById("pod-container").appendChild( labelRenderer.domElement );
+        document.getElementById("pod-container").appendChild(labelRenderer.domElement);
 
         // Create the render loop
         loop = new Loop(camera, scene, renderer, labelRenderer, composer);
@@ -97,12 +97,12 @@ class World {
         let podScene = await loadPod();
         scene.add(podScene.scene);
 
-        scene.fog = new Fog( "rgb(21, 21, 21)", 0.05, 80); 
+        scene.fog = new Fog("rgb(21, 21, 21)", 0.05, 80);
 
         // podMeshes[0].name = "Track";
         // podMeshes[0].add( createLabel("", 0, 0, 0) );
         // scene.add( podMeshes[0] );
-        
+
         // podMeshes[0].name = "shell";
         // podMeshes[0].add( createLabel("Carbon Fiber Shell", 0, 0.3, 0.4) );
         // scene.add( podMeshes[0] );
@@ -136,18 +136,18 @@ class World {
         loop.start();
     }
 
-    stop () {
+    stop() {
         loop.stop();
     }
 }
 
-function createLabel(name, offsetX, offsetY, offsetZ){
-    let div = document.createElement( 'div' );
+function createLabel(name, offsetX, offsetY, offsetZ) {
+    let div = document.createElement('div');
     div.className = 'label';
     div.textContent = name;
-    let label = new CSS2DObject( div );
+    let label = new CSS2DObject(div);
 
-    label.position.set( offsetX, offsetY, offsetZ );
+    label.position.set(offsetX, offsetY, offsetZ);
 
     return label;
 }
