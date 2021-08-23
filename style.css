@@ -252,7 +252,7 @@ body .landingPage {
     height: 300px;
     font-weight: 700;
     font-size: 100px;
-    margin-bottom: 150px;
+    margin-top: 100px;
 }
 
 .landingPage .button {
@@ -410,6 +410,7 @@ color: transparent;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    background: #000000;
 }
 
 .mission canvas {
@@ -514,7 +515,7 @@ section h1  {
 
 .social>h1 {
     flex: 0 0 100%;
-    font-size: 5vw;
+    font-size: 70px;
     text-align: center;
     color: #fff;
     margin-top: 15vw;
@@ -528,6 +529,10 @@ section h1  {
     text-align: center;
     justify-content: center;
     margin-top: 100px;
+}
+
+.social .slick-track {
+    margin-left: 10px;
 }
 
 .social img {
@@ -741,7 +746,7 @@ border-radius: 30px;
 
 .leads>div>h1 {
     color: #fff;
-    font-size: 5vw;
+    font-size: 70px;
     /*text-shadow: 4px 4px 0px rgba(0,0,0,0.3);*/
 }
 
@@ -972,7 +977,7 @@ i::before {
     text-align: center;
     margin-top: 5%;
     padding: 20px;
-    font-size: 5vw;
+    font-size: 70px;
 }
 
 /*
@@ -1104,7 +1109,7 @@ i::before {
         padding: 0px;
     }
    .leads>div>h1{
-        font-size: 2.5vw;
+        font-size: 40px;
         
     }
     
@@ -1141,6 +1146,9 @@ i::before {
         opacity: 1;
         background-color: rgba(255, 255, 255, 0.3); 
         cursor: pointer;
+        margin-top: 13px;
+        width:140px;
+        height: 140px;
     }
 
     .competition h1 {
@@ -1149,11 +1157,13 @@ i::before {
         width: 100%;
         text-align: center;
         padding: 30px 0;
-        font-size: 2.5vw;
+        font-size: 40px;
         font-weight: 800;
     }
     
-    
+    .countdown{
+        width: 95%;
+    }
   
 }
 
@@ -1167,6 +1177,23 @@ i::before {
    header .mail-mobile {
         display: flex;
     }
+
+
+.countdown {
+    width: 100%;
+}
+    #competition-counter {
+        width: 100%;
+    }
+
+    #timer {
+        width: 100%;
+    }
+    #timer div {
+        width: 24%;
+    }
+
+
 }
 
 /* classed for Javascript are defined here! */
