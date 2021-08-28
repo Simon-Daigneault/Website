@@ -5,7 +5,7 @@ function createControls(camera, canvas) {
 
   controls.enableDamping = true;
   
-   controls.enableZoom = false;
+  controls.enableZoom = false;
 
   // forward controls.update to our custom .tick method
   controls.tick = () => controls.update();
