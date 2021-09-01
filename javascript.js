@@ -77,7 +77,7 @@ const missionContext = missionCanvas.getContext("2d");
 // canvas.width = 1158;
 // canvas.height = 770;
 
-const frameCount = 20;
+const frameCount = 60;
 const currentFrame = index => (
   `media/rrr_animation/${(index + 1).toString().padStart(4, "0")}.png`
 );
