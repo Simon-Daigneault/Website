@@ -9,6 +9,9 @@ function createControls(camera, canvas) {
 
   controls.enableZoom = false;
 
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = -0.3;
+  
   // forward controls.update to our custom .tick method
   controls.tick = () => controls.update();
 
