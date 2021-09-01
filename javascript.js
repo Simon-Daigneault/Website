@@ -79,7 +79,7 @@ const missionContext = missionCanvas.getContext("2d");
 
 const frameCount = 120;
 const currentFrame = index => (
-  `media/rrr_animation/120frames/${(index + 1).toString().padStart(4, "0")}.png`
+  `media/rrr_animation/testframes/${(index + 1).toString().padStart(4, "0")}.png`
 );
 
 const images = []
