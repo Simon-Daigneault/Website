@@ -77,9 +77,9 @@ const missionContext = missionCanvas.getContext("2d");
 // canvas.width = 1158;
 // canvas.height = 770;
 
-const frameCount = 60;
+const frameCount = 120;
 const currentFrame = index => (
-  `media/rrr_animation/${(index + 1).toString().padStart(4, "0")}.png`
+  `media/rrr_animation/120frames/${(index + 1).toString().padStart(4, "0")}.png`
 );
 
 const images = []
@@ -99,7 +99,7 @@ gsap.to(threewords, {
   scrollTrigger: {
     // trigger: threewords,
     start: `${landingHeight} top`,
-    end: `${landingHeight + missionHeight} bottom`,
+    end: `${landingHeight + missionHeight + 2000} bottom`,
     markers: false,
     scrub: 0.5,
   },
