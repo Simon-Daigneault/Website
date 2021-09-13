@@ -81,7 +81,9 @@
             
 
             <div class="lander">
-               <button class="button glow-on-hover" onclick="scrollToPod()">Start the Journey</button>
+              <a href="#start" style="text-decoration: none;"> 
+                  <button class="button glow-on-hover" onclick="">Start the Journey</button>
+              </a>
             </div>
 
         </section>
@@ -134,7 +136,7 @@
         </section> -->
 
 <section class="sections mission">
-    <div class="mission-fixed-part">
+    <div id='start' class="mission-fixed-part">
         <canvas class="mission-canvas">
     </div>
 
@@ -143,7 +145,7 @@
 </section>
 
         <!-- 3D pod -->
-        <section class="sections pod-section">
+        <section id='pod-section' class="sections pod-section">
             <script type="module" src="main.js"></script>
             <div class="pod">
                 <h1>The Pod</h1>
@@ -379,6 +381,30 @@
                 waitForAnimate: true,
             })
 
+            $("a").on('click', function(event) {
+
+// Make sure this.hash has a value before overriding default behavior
+if (this.hash !== "") {
+  // Prevent default anchor click behavior
+  event.preventDefault();
+
+  // Store hash
+  var hash = this.hash;
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 3200, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+  });
+} // End if
+});
+
+
+
         });
 
 
@@ -410,15 +436,37 @@ let scrollToSection = (whereTo) => {
 
 };
 
-let scrollToPod = async () =>{
-  console.log(0,podSection.offsetTop);
+//SCROLL BEHAVIOUR IS UNPREDICTABLE AND LAGGY, SO  USER WILL HAVE TO KEEP SCROLLING RATHER
 
-  for (var y = 0; y <= podSection.offsetTop; y += 50) {
-    window.scrollTo({top: y, behavior: 'smooth'})
-    await scrollDelay(100)
-}
+// let globalScrollInterval;
 
-}
+// let globalY = 0;
+
+
+// let scrollToPod = () =>{
+//   //console.log(0,podSection.offsetTop);
+
+
+//     globalScrollInterval = setInterval(scrollingWSpeed,50);
+    
+//     //await scrollDelay(100);
+
+
+// };
+
+
+
+// let scrollingWSpeed = () => {
+
+//     window.scrollTo({top: globalY, behavior: 'smooth'})
+
+//     globalY+= 20;
+
+//     if(globalY > podSection.offsetTop){
+//         clearInterval(globalScrollInterval);
+//     }
+
+// };
 
 
         gsap.registerPlugin(ScrollTrigger);

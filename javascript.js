@@ -98,7 +98,7 @@ gsap.to(threewords, {
   snap: "frame",
   scrollTrigger: {
     // trigger: threewords,
-    start: `${landingHeight} top`,
+    start: `${landingHeight - 300} top`,
     end: `${landingHeight + missionHeight + 2000} bottom`,
     markers: false,
     scrub: 0.5,
@@ -119,7 +119,7 @@ function render() {
 
 document.addEventListener("scroll", () => {
   console.log(missionCanvas);
-  if (missionHeight + landingHeight > window.pageYOffset && window.pageYOffset > landingHeight && !missionSection.classList.contains("fixed-animation")) {
+  if (missionHeight + landingHeight > window.pageYOffset && window.pageYOffset > landingHeight - 300 && !missionSection.classList.contains("fixed-animation")) {
     console.log("i am in viewport");
     missionFixedPart.classList.add("fixed-animation");
   }
