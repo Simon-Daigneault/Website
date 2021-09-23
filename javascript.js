@@ -66,8 +66,8 @@ console.log(missionYOffset);
 console.log(landingHeight);
 
 
-missionCanvas.width = 640;
-missionCanvas.height = 480;
+missionCanvas.width = 1080;
+missionCanvas.height = 720;
 
 
 
@@ -77,7 +77,7 @@ const missionContext = missionCanvas.getContext("2d");
 // canvas.width = 1158;
 // canvas.height = 770;
 
-const frameCount = 120;
+const frameCount = 150;
 const currentFrame = index => (
   `media/rrr_animation/testframes/${(index + 1).toString().padStart(4, "0")}.png`
 );
@@ -110,7 +110,7 @@ images[0].onload = render;
 
 function render() {
   missionContext.clearRect(0, 0, missionCanvas.width, missionCanvas.height);
-  missionContext.drawImage(images[threewords.frame], 0, 0, 640, 480);
+  missionContext.drawImage(images[threewords.frame], 0, 0, 1080, 720);
 
 }
 
@@ -140,7 +140,7 @@ document.addEventListener("scroll", () => {
 
 //Landing Page
 
-var TxtRotate = function(el, toRotate, period) {
+var TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -150,7 +150,7 @@ var TxtRotate = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtRotate.prototype.tick = function() {
+TxtRotate.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -160,7 +160,7 @@ TxtRotate.prototype.tick = function() {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 300 - Math.random() * 100;
@@ -176,21 +176,21 @@ TxtRotate.prototype.tick = function() {
     delta = 500;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
   var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
+  for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute('data-rotate');
     var period = elements[i].getAttribute('data-period');
     if (toRotate) {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
- 
+
 };
 
 
